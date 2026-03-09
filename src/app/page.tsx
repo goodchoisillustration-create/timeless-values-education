@@ -17,7 +17,7 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-8 text-sm font-medium">
             <a href="#" className="hover:text-logo-blue transition-colors">소개</a>
             <a href="#" className="hover:text-logo-green transition-colors">프로그램</a>
-            <a href="#" className="hover:text-logo-orange transition-colors">가치관</a>
+            <a href="#" className="hover:text-logo-orange transition-colors">핵심가치</a>
             <Button className="bg-logo-blue hover:bg-logo-blue/90 text-white rounded-full px-6">
               시작하기
             </Button>
