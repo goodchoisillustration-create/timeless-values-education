@@ -1,85 +1,283 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Globe, BookOpen, Users } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  Linkedin,
+  Instagram,
+  Twitter,
+  Facebook,
+  Search,
+  ArrowRight,
+  BookOpen,
+  Users,
+  Heart,
+  Globe,
+  Star,
+  GraduationCap,
+  CalendarDays,
+  Utensils,
+  Lightbulb
+} from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background font-sans text-foreground selection:bg-logo-yellow/30">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 w-full border-b bg-background/80 backdrop-blur-md">
-        <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <div className="flex items-center gap-2">
-            <div className="h-8 w-8 bg-logo-blue rounded-full" /> {/* Placeholder for logo */}
-            <span className="text-xl font-bold tracking-tight">초시대 가치 교육</span>
+    <div className="min-h-screen text-foreground selection:bg-edu-yellow selection:text-white overflow-x-hidden">
+
+      {/* Top Header Bar */}
+      <div className="hidden lg:block bg-white border-b py-2 px-6">
+        <div className="container mx-auto flex justify-between items-center text-xs font-semibold text-muted-foreground/80">
+          <div className="flex gap-6">
+            <div className="flex items-center gap-1.5 hover:text-edu-teal transition-colors cursor-pointer">
+              <Phone className="h-3 w-3" /> 1588-XXXX
+            </div>
+            <div className="flex items-center gap-1.5 hover:text-edu-teal transition-colors cursor-pointer border-l pl-6">
+              <Mail className="h-3 w-3" /> info@tve.edu
+            </div>
           </div>
-          <div className="hidden md:flex items-center gap-8 text-sm font-medium">
-            <a href="#" className="hover:text-logo-blue transition-colors">소개</a>
-            <a href="#" className="hover:text-logo-green transition-colors">프로그램</a>
-            <a href="#" className="hover:text-logo-orange transition-colors">핵심가치</a>
-            <Button className="bg-logo-blue hover:bg-logo-blue/90 text-white rounded-full px-6">
-              시작하기
-            </Button>
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 pr-6 border-r">
+              <Facebook className="h-3.5 w-3.5 hover:text-edu-teal cursor-pointer" />
+              <Instagram className="h-3.5 w-3.5 hover:text-edu-teal cursor-pointer" />
+              <Linkedin className="h-3.5 w-3.5 hover:text-edu-teal cursor-pointer" />
+              <Twitter className="h-3.5 w-3.5 hover:text-edu-teal cursor-pointer" />
+            </div>
+            <div className="flex gap-4">
+              <span className="hover:text-edu-teal cursor-pointer">English</span>
+              <span className="hover:text-edu-teal cursor-pointer">Login</span>
+              <span className="hover:text-edu-teal cursor-pointer">Register</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Navigation */}
+      <nav className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b-4 border-edu-teal">
+        <div className="container mx-auto flex h-24 items-center justify-between px-6">
+          <div className="flex items-center gap-2">
+            <div className="h-10 w-10 bg-edu-yellow rounded-xl flex items-center justify-center text-white">
+              <BookOpen className="h-6 w-6 stroke-[3]" />
+            </div>
+            <span className="text-3xl font-black tracking-tight text-edu-teal font-serif">Educate</span>
+          </div>
+
+          <div className="hidden lg:flex items-center gap-8 text-[15px] font-extrabold uppercase tracking-wide">
+            <a href="#" className="text-edu-yellow border-b-2 border-edu-yellow pb-1 font-black">Home</a>
+            <a href="#" className="hover:text-edu-yellow transition-colors border-b-2 border-transparent hover:border-edu-yellow pb-1">About</a>
+            <a href="#" className="hover:text-edu-yellow transition-colors border-b-2 border-transparent hover:border-edu-yellow pb-1">Programs</a>
+            <a href="#" className="hover:text-edu-yellow transition-colors border-b-2 border-transparent hover:border-edu-yellow pb-1">Values</a>
+            <a href="#" className="hover:text-edu-yellow transition-colors border-b-2 border-transparent hover:border-edu-yellow pb-1">Contact</a>
+            <div className="w-px h-6 bg-border mx-2" />
+            <Search className="h-5 w-5 cursor-pointer hover:text-edu-yellow transition-colors" />
           </div>
         </div>
       </nav>
 
       <main>
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-24 lg:py-32">
-          <div className="container mx-auto px-4 text-center">
-            <Badge variant="outline" className="mb-4 border-logo-blue text-logo-blue rounded-full px-4 py-1">
-              TIMELESS VALUES EDUCATION
-            </Badge>
-            <h1 className="mb-6 text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
-              시대를 초월하는 <span className="text-logo-red">영원한 가치</span>,<br />
-              부모와 자녀의 <span className="text-logo-green">따뜻한 연결</span>
-            </h1>
-            <p className="mx-auto mb-10 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-              초시대 기술의 파도 속에서도 변치 않는 인성과 가치를 배웁니다. 
-              부모와 자녀가 함께 손을 맞잡고 성장하는 가장 소중한 시간.
-            </p>
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Button size="lg" className="bg-logo-orange hover:bg-logo-orange/90 text-white rounded-full px-8 py-6 text-lg">
-                자세히 알아보기
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-8 py-6 text-lg border-2">
-                교육과정 보기
-              </Button>
+        <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/images/hero_kids_studying_1773192555242.png"
+              alt="Background"
+              fill
+              className="object-cover"
+              priority
+            />
+            {/* Dark Overlay with Tint */}
+            <div className="absolute inset-0 bg-edu-dark/50 mix-blend-multiply" />
+          </div>
+
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-3xl">
+              <motion.h1
+                initial={{ opacity: 0, x: -30 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="text-6xl md:text-8xl font-black text-white leading-[0.9] mb-8 uppercase tracking-tighter"
+              >
+                PRESCHOOL FOR <br />
+                <span className="text-edu-yellow italic font-normal text-handwriting lowercase tracking-normal">Everyone</span>
+              </motion.h1>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-white/90 text-xl font-medium mb-10 leading-relaxed max-w-xl"
+              >
+                시대를 초월하는 영원한 가치 교육,<br />
+                초시대 가치 교과과정은 기술의 발전 속에서도 변치 않는 지혜를 아이들에게 선물합니다.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <Button size="lg" className="bg-edu-teal hover:bg-edu-teal/90 text-white rounded-none px-10 py-7 text-lg uppercase font-black tracking-widest border-none shadow-xl">
+                  View More <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </motion.div>
             </div>
           </div>
 
-          {/* Decorative Elements (Logo Colors) */}
-          <div className="absolute -left-20 top-1/4 h-64 w-64 rounded-full bg-logo-yellow/10 blur-3xl" />
-          <div className="absolute -right-20 bottom-1/4 h-80 w-80 rounded-full bg-logo-blue/10 blur-3xl" />
+          {/* Hero Navigation Arrows - Decoration */}
+          <div className="absolute left-10 top-1/2 -translate-y-1/2 hidden md:block opacity-30 hover:opacity-100 transition-opacity">
+            <div className="h-12 w-12 border-2 border-white flex items-center justify-center cursor-pointer">
+              <ArrowRight className="h-6 w-6 text-white rotate-180" />
+            </div>
+          </div>
+          <div className="absolute right-10 top-1/2 -translate-y-1/2 hidden md:block opacity-30 hover:opacity-100 transition-opacity">
+            <div className="h-12 w-12 border-2 border-white flex items-center justify-center cursor-pointer">
+              <ArrowRight className="h-6 w-6 text-white" />
+            </div>
+          </div>
         </section>
 
-        {/* Highlight Section */}
-        <section className="bg-white/50 py-24">
-          <div className="container mx-auto px-4">
-            <div className="grid gap-8 md:grid-cols-3">
+        {/* Color Blocks Section */}
+        <section className="relative z-20">
+          <div className="grid md:grid-cols-3">
+            {[
+              { title: "PLAYGROUND", color: "bg-edu-yellow", delay: 0 },
+              { title: "LEARNING", color: "bg-edu-coral", delay: 0.1 },
+              { title: "ENTERTAINMENT", color: "bg-edu-teal", delay: 0.2 }
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: item.delay }}
+                className={`${item.color} p-16 text-white group cursor-pointer overflow-hidden relative`}
+              >
+                <h3 className="text-3xl font-black mb-6 uppercase tracking-tighter">{item.title}</h3>
+                <p className="text-white/80 leading-relaxed mb-10 font-medium">
+                  아이들이 스스로 선택하고 활동하며 자신만의 세상을 만들어가는 즐겁고 유익한 공간입니다.
+                </p>
+                <div className="flex items-center gap-2 font-bold uppercase tracking-widest text-sm border-b border-white/30 w-fit pb-1 group-hover:gap-4 transition-all">
+                  Know More <ArrowRight className="h-4 w-4" />
+                </div>
+                {/* Decorative Pattern - Fixed background or SVG could go here */}
+              </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* Icon Grid Section */}
+        <section className="py-24 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="grid md:grid-cols-3 gap-y-16 gap-x-12">
               {[
-                { icon: Heart, title: "감성 지능", desc: "서로의 마음을 깊이 이해하고 공감하는 능력을 키웁니다.", color: "text-logo-red" },
-                { icon: Globe, title: "글로벌 시민", desc: "다양한 가치를 존중하며 더 넓은 세상을 향해 나아갑니다.", color: "text-logo-cyan" },
-                { icon: BookOpen, title: "지혜의 독서", desc: "시대를 관통하는 지혜가 담긴 고전을 함께 읽습니다.", color: "text-logo-blue" },
+                { icon: Star, title: "PLAY TIME", desc: "창의력과 상상력을 자극하는 자유로운 놀이 시간을 제공합니다." },
+                { icon: CalendarDays, title: "DAYCARE", desc: "부모님이 안심할 수 있는 안전하고 세심한 일과 관리 서비스입니다." },
+                { icon: BookOpen, title: "LEARNING", desc: "본질적인 지혜를 깨우치는 초시대의 가치 교과 로드맵을 따릅니다." },
+                { icon: Globe, title: "OUTDOORS", desc: "자연과 소통하며 사회성과 신체 건강을 동시에 키우는 야외 활동입니다." },
+                { icon: Utensils, title: "HEALTHY MEALS", desc: "성장기 아이들을 위한 영양 균형이 잡힌 정성스럽고 건강한 식단입니다." },
+                { icon: GraduationCap, title: "EVENTS", desc: "꿈과 끼를 발산하고 성취감을 느끼는 다채로운 교육 축제의 장입니다." },
               ].map((item, i) => (
-                <Card key={i} className="border-none bg-background shadow-xl shadow-logo-blue/5 hover:shadow-logo-blue/10 transition-shadow rounded-3xl overflow-hidden">
-                  <CardContent className="p-8">
-                    <item.icon className={`mb-4 h-10 w-10 ${item.color}`} />
-                    <h3 className="mb-2 text-xl font-bold">{item.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
-                  </CardContent>
-                </Card>
+                <div key={i} className="flex gap-6 group">
+                  <div className="h-20 w-20 flex-shrink-0 bg-edu-yellow/10 rounded-full flex items-center justify-center p-5 group-hover:scale-110 transition-transform duration-300">
+                    <item.icon className="h-full w-full text-edu-yellow stroke-[1.5]" />
+                  </div>
+                  <div>
+                    <h4 className="text-2xl font-black mb-3 uppercase tracking-tighter text-edu-dark font-serif">{item.title}</h4>
+                    <p className="text-muted-foreground leading-relaxed font-medium">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Info Banner Section 1 */}
+        <section className="py-12 px-6">
+          <div className="container mx-auto grid lg:grid-cols-2 gap-0 overflow-hidden border">
+            <div className="relative aspect-[16/9] lg:aspect-auto">
+              <Image
+                src="/images/homeschooling_family_1773192571121.png"
+                alt="Feature"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="bg-edu-yellow p-16 md:p-24 flex flex-col justify-center text-white">
+              <h2 className="text-4xl md:text-5xl font-black mb-8 leading-[1.1] uppercase tracking-tighter">LEARNING SYSTEM</h2>
+              <p className="text-white/90 text-lg md:text-xl font-medium mb-12 leading-relaxed">
+                가정에서도 학교에서도 풍성한 학습이 이루어지는 유동적인 교육 시스템을 만나보세요.
+                부모님과 자녀가 함께 가치 중심의 삶을 실천하는 방법을 배웁니다.
+              </p>
+              <Button size="lg" className="bg-edu-teal hover:bg-edu-teal/90 text-white rounded-none w-fit px-12 py-7 font-black tracking-widest uppercase border-none">
+                Details
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Info Banner Section 2 */}
+        <section className="py-12 px-6 pb-24">
+          <div className="container mx-auto grid lg:grid-cols-2 gap-0 overflow-hidden border">
+            <div className="bg-edu-teal p-16 md:p-24 flex flex-col justify-center text-white order-2 lg:order-1">
+              <h2 className="text-4xl md:text-5xl font-black mb-8 leading-[1.1] uppercase tracking-tighter">STEM & VALUES</h2>
+              <p className="text-white/90 text-lg md:text-xl font-medium mb-12 leading-relaxed">
+                미래 기술 역량인 STEM에 윤리와 가치를 더했습니다.
+                인공지능 시대를 이끄는 따뜻한 지성을 가진 글로벌 리더로 성장합니다.
+              </p>
+              <Button size="lg" className="bg-edu-yellow hover:bg-edu-yellow/90 text-edu-teal rounded-none w-fit px-12 py-7 font-black tracking-widest uppercase border-none">
+                More Info
+              </Button>
+            </div>
+            <div className="relative aspect-[16/9] lg:aspect-auto order-1 lg:order-2">
+              <Image
+                src="/images/school_activity_group_1773192587412.png"
+                alt="STEM Activity"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Bottom CTA / Newsletter */}
+        <section className="bg-edu-dark py-24 px-6 text-center">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tighter">JOIN OUR COMMUNITY</h2>
+            <p className="text-white/60 text-xl font-medium mb-12">초시대 가치 교육의 최신 소식과 교육 자료를 받아보세요.</p>
+            <div className="flex flex-col sm:flex-row gap-0 max-w-2xl mx-auto border-4 border-edu-teal">
+              <input
+                type="email"
+                placeholder="YOUR EMAIL ADDRESS"
+                className="flex-1 bg-white text-edu-dark px-8 py-5 text-lg font-bold focus:outline-none placeholder:text-muted-foreground/50 rounded-none uppercase"
+              />
+              <button className="bg-edu-teal hover:bg-edu-teal/90 text-white px-10 py-5 font-black uppercase tracking-widest transition-colors rounded-none whitespace-nowrap">
+                Subscribe
+              </button>
             </div>
           </div>
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t py-12 text-center text-sm text-muted-foreground">
-        <p>© 2026 초시대 가치 교육. All rights reserved.</p>
+      {/* Simple Footer */}
+      <footer className="bg-white py-12 px-6 border-t font-bold text-sm text-muted-foreground/80 uppercase tracking-widest">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-2 opacity-50 grayscale">
+            <div className="h-6 w-6 bg-edu-teal rounded flex items-center justify-center text-white">
+              <BookOpen className="h-4 w-4 stroke-[3]" />
+            </div>
+            <span className="text-lg font-black tracking-tight text-edu-teal font-serif">Educate</span>
+          </div>
+          <p>© 2026 AGELESS VALUES EDUCATION. ALL RIGHTS RESERVED.</p>
+          <div className="flex gap-8">
+            <span className="hover:text-edu-yellow cursor-pointer transition-colors">Privacy</span>
+            <span className="hover:text-edu-yellow cursor-pointer transition-colors">Terms</span>
+          </div>
+        </div>
       </footer>
     </div>
   );
