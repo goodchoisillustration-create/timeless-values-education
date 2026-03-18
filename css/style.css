@@ -613,25 +613,60 @@ a {
    Our Hearts Section
    ========================================================================== */
 .our-hearts {
-    padding: var(--section-padding);
+    padding: 0;
     background-color: var(--bg-color);
-    text-align: center;
+}
+
+.our-hearts__scroll-container {
+    position: relative;
+    height: 250vh; /* Scroll room for animation */
+}
+
+.our-hearts__sticky-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: var(--section-padding);
 }
 
 .our-hearts__content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-    margin-top: 6rem;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
 }
 
 .our-hearts__card {
+    position: absolute;
+    width: 320px;
+    min-height: 400px;
     padding: 4rem 3rem;
-    position: relative;
+    z-index: 1;
+    transition: transform 0.1s ease-out, opacity 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+    /* Initial stacked state */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
 }
 
-.our-hearts__card:hover {
-    transform: translateY(-1rem);
+.our-hearts__card.active {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .our-hearts__icon {
@@ -640,16 +675,16 @@ a {
 }
 
 .our-hearts__card-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .our-hearts__card-text {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     color: var(--text-light);
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 
