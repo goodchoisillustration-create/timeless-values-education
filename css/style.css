@@ -138,7 +138,7 @@ a {
 }
 
 .logo__img {
-    height: 2.4rem;
+    height: 3.5rem; /* Increased size for brand logo */
     width: auto;
 }
 
