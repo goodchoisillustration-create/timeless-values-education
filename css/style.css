@@ -137,13 +137,17 @@ a {
 }
 
 .logo__img {
-    height: 4.8rem; /* Increased size for professional logo visibility */
+    height: 6.5rem; /* Significant increase for readability and impact */
     width: auto;
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.header.scrolled .logo__img {
+    height: 4rem; /* More compact for the sticky header */
 }
 
 .logo__img:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
 .nav__pill {
