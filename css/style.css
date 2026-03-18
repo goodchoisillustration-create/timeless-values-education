@@ -137,7 +137,7 @@ a {
 }
 
 .logo__img {
-    height: 6.5rem; /* Significant increase for readability and impact */
+    height: 9rem; /* Significant increase for bold branding */
     width: auto;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
