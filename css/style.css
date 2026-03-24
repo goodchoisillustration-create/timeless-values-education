@@ -105,6 +105,43 @@ a {
     transform: translateY(-5px);
 }
 
+/* Brand Color Utilities (Soft Backgrounds) */
+.bg-soft-blue { background-color: rgba(34, 117, 184, 0.03); }
+.bg-soft-cyan { background-color: rgba(0, 137, 135, 0.03); }
+.bg-soft-orange { background-color: rgba(240, 106, 0, 0.03); }
+.bg-soft-red { background-color: rgba(230, 42, 45, 0.03); }
+.bg-soft-yellow { background-color: rgba(255, 200, 0, 0.03); }
+.bg-soft-lime { background-color: rgba(155, 197, 61, 0.03); }
+
+/* Expertise Note Component */
+.expertise-note {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    border-left: 4px solid var(--dot-cyan);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    margin: 3rem 0;
+    position: relative;
+}
+
+.expertise-note__label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--dot-cyan);
+    margin-bottom: 1rem;
+}
+
+.expertise-note__text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-primary);
+    font-style: italic;
+}
+
 /* ==========================================================================
    Header & Navigation (Sitetrip Style)
    ========================================================================== */
@@ -208,9 +245,7 @@ a {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 12rem var(--space-md) 8rem var(--space-md); /* Adjusted for fixed header */
+    padding: 14rem var(--space-md) 10rem var(--space-md);
     position: relative;
     overflow: hidden;
     background: radial-gradient(circle at 50% 50%, #faf9f8 0%, #f5f3f0 100%);
@@ -251,10 +286,88 @@ a {
 }
 
 .hero__container {
-    max-width: 900px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 6rem;
+    align-items: center;
+    max-width: var(--container-width);
     width: 100%;
     position: relative;
     z-index: 2;
+}
+
+.hero__content {
+    text-align: left;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: var(--section-padding);
+}
+
+.testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.testimonial-card {
+    padding: 3rem;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.testimonial-text {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.testimonial-text::before {
+    content: '"';
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+    font-size: 5rem;
+    color: rgba(0, 0, 0, 0.05);
+    font-family: serif;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* Roadmap Visualization Refinement */
+.roadmap__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+.roadmap-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.4s ease;
+}
+
+.roadmap-item:hover {
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+    transform: translateY(-5px);
 }
 
 .hero__label {
@@ -1007,6 +1120,48 @@ a {
     transform: translateY(-8px);
     border-color: var(--brand-blue);
     box-shadow: 0 15px 40px rgba(34, 117, 184, 0.1);
+}
+
+.hero__description {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 580px;
+    padding: 2rem;
+}
+
+.hero__image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.hero__image {
+    width: 100%;
+    height: auto;
+    border-radius: 4rem;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.08);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero__image:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.hero__image-badge {
+    position: absolute;
+    bottom: 2rem;
+    left: -2rem;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    z-index: 3;
 }
 
 .contact__item-label {
