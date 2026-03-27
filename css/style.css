@@ -1506,16 +1506,16 @@ a {
 
 /* Build Section Illustration */
 .build__illustration {
-    margin: 2rem 0 1rem;
-    border-radius: 1.5rem;
+    margin: 1.5rem 0 0.5rem;
+    max-height: 200px;
     overflow: hidden;
 }
 
 .build__illustration img {
     width: 100%;
-    height: auto;
+    max-height: 200px;
+    object-fit: contain;
     display: block;
-    object-fit: cover;
 }
 
 /* ==========================================================================
