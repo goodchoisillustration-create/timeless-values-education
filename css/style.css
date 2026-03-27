@@ -769,31 +769,6 @@ a {
     line-height: 1.6;
 }
 
-/* Build Image (Left Column) */
-.build__image {
-    margin-top: 3.5rem;
-    border-radius: 1.5rem;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
-    position: relative;
-    max-width: 95%; 
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-}
-
-.build__image-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transform: scale(1);
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.build__image:hover .build__image-img {
-    transform: scale(1.03);
-}
-
 /* Feature Item Adjustments & Watermark */
 .feature-item {
     position: relative;
