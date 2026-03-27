@@ -163,6 +163,54 @@ a {
 .bg-soft-orange { background-color: rgba(240, 106, 0, 0.03); }
 .bg-soft-red { background-color: rgba(230, 42, 45, 0.03); }
 .bg-soft-yellow { background-color: rgba(255, 200, 0, 0.03); }
+
+/* ==========================================================================
+   WOW Color Points & Visual Sensations
+   ========================================================================== */
+.text-gradient {
+    background: linear-gradient(135deg, var(--dot-blue), var(--dot-cyan), var(--dot-green), var(--dot-blue));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientFlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.glow-container {
+    position: relative;
+    z-index: 1;
+}
+
+.glow-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.2;
+    z-index: -1;
+    pointer-events: none;
+    animation: pulseOrb 8s cubic-bezier(0.25, 1, 0.5, 1) infinite alternate;
+}
+
+@keyframes pulseOrb {
+    0% { transform: scale(1) translate(0, 0); opacity: 0.15; }
+    100% { transform: scale(1.3) translate(5%, 10%); opacity: 0.35; }
+}
+
+.glow-blue { background: var(--dot-blue); }
+.glow-cyan { background: var(--dot-cyan); }
+.glow-orange { background: var(--dot-orange); }
+.glow-green { background: var(--dot-green); }
+.glow-red { background: var(--dot-red); }
+.glow-yellow { background: var(--dot-yellow); }
+
+/* Hero CTA Glow */
+.btn--glass-blue:hover { box-shadow: 0 0 40px rgba(34, 117, 184, 0.4); }
+.btn--glass-green:hover { box-shadow: 0 0 40px rgba(155, 197, 61, 0.5); }
+.btn--glass-red:hover { box-shadow: 0 0 40px rgba(230, 42, 45, 0.4); }
 .bg-soft-lime { background-color: rgba(155, 197, 61, 0.03); }
 
 /* Expertise Note Component */
