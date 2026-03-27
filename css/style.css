@@ -1504,6 +1504,20 @@ a {
     }
 }
 
+/* Build Section Illustration */
+.build__illustration {
+    margin: 2rem 0 1rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+}
+
+.build__illustration img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
 /* ==========================================================================
    Editorial Minimal CTA
    ========================================================================== */
