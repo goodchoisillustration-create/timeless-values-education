@@ -16,6 +16,11 @@
     --dot-green: #9BC53D;
     --dot-lavender: #bba9f0;
 
+    /* Theme Aliases */
+    --brand-blue: var(--dot-blue);
+    --brand-cyan: var(--dot-cyan);
+    --brand-orange: var(--dot-orange);
+
     /* Spacing Scale (Sitetrip uses generous whitespace) */
     --space-xs: 0.5rem;   /* 8px */
     --space-sm: 1rem;     /* 16px */
@@ -55,6 +60,38 @@ body {
     line-height: var(--line-height-relaxed);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Premium Mesh Gradient Background System (Fixed for Scroll) */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 15% 15%, rgba(34, 117, 184, 0.05) 0%, transparent 45%),
+        radial-gradient(circle at 85% 85%, rgba(0, 137, 137, 0.05) 0%, transparent 45%),
+        radial-gradient(circle at 80% 20%, rgba(240, 106, 0, 0.02) 0%, transparent 35%);
+    pointer-events: none;
+}
+
+/* Subtle Grain Texture for Premium Feel (Fixed for Scroll) */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.035;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -147,13 +184,13 @@ a {
    ========================================================================== */
 .header {
     position: fixed;
-    top: 2rem;
+    top: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
     max-width: var(--container-width);
     z-index: 1000;
-    padding: 1.2rem 2.4rem;
+    padding: 1rem 2rem;
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
@@ -186,13 +223,13 @@ a {
 }
 
 .logo__img {
-    height: 9rem; /* Significant increase for bold branding */
+    height: 7.5rem; /* Increased for better visibility */
     width: auto;
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .header.scrolled .logo__img {
-    height: 4rem; /* More compact for the sticky header */
+    height: 5rem; /* Clearer branding even when scrolling */
 }
 
 .logo__img:hover {
@@ -245,7 +282,7 @@ a {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 14rem var(--space-md) 10rem var(--space-md);
+    padding: 20rem var(--space-md) 10rem var(--space-md);
     position: relative;
     overflow: hidden;
     background: radial-gradient(circle at 50% 50%, #faf9f8 0%, #f5f3f0 100%);
@@ -287,8 +324,8 @@ a {
 
 .hero__container {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 6rem;
+    grid-template-columns: 1.28fr 0.72fr;
+    gap: 3rem;
     align-items: center;
     max-width: var(--container-width);
     width: 100%;
@@ -349,26 +386,6 @@ a {
     color: var(--text-secondary);
 }
 
-/* Roadmap Visualization Refinement */
-.roadmap__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 5rem;
-}
-
-.roadmap-item {
-    background: white;
-    padding: 2.5rem;
-    border-radius: 2.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.03);
-    transition: all 0.4s ease;
-}
-
-.roadmap-item:hover {
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
-    transform: translateY(-5px);
-}
 
 .hero__label {
     display: inline-block;
@@ -384,7 +401,7 @@ a {
 .hero__title {
     max-width: 850px;
     margin: 0 auto var(--space-lg) auto;
-    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    font-size: clamp(2rem, 4vw, 3.2rem);
     font-weight: 800;
     line-height: 1.15;
     letter-spacing: -0.04em;
@@ -403,23 +420,56 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+.hero__image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.hero__image {
+    width: 100%;
+    height: auto;
+    border-radius: 4rem;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.08);
+    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero__image:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.hero__image-badge {
+    position: absolute;
+    bottom: 2rem;
+    left: -2rem;
+    background: white;
+    padding: 1rem 1.5rem;
+    border-radius: 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    z-index: 3;
+}
+
 
 /* ==========================================================================
    Buttons
    ========================================================================== */
 .hero__buttons {
     display: flex;
-    gap: 1.25rem;
-    /* 버튼 사이 간격 여유 있게 */
-    justify-content: center;
-    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
 }
 
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1.125rem 2.25rem;
+    padding: 0.9rem 1.2rem;
     font-size: 1.05rem;
     font-weight: 700;
     border-radius: 9999px;
@@ -462,6 +512,53 @@ a {
     border-color: var(--brand-cyan);
     transform: translateY(-4px);
     color: var(--brand-cyan);
+}
+
+/* Premium Glass Button Style (Refined Branding) */
+.btn--glass {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(0, 0, 0, 0.05) !important;
+    text-shadow: none !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
+    color: var(--text-primary) !important;
+}
+
+.btn--glass:hover {
+    transform: translateY(-4px) scale(1.02);
+    background: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.btn--glass-blue {
+    color: var(--dot-blue) !important;
+    border-color: rgba(34, 117, 184, 0.25) !important;
+}
+
+.btn--glass-blue:hover {
+    background: rgba(34, 117, 184, 0.05) !important;
+    border-color: var(--dot-blue) !important;
+}
+
+.btn--glass-green {
+    color: var(--dot-green) !important;
+    border-color: rgba(155, 197, 61, 0.25) !important;
+}
+
+.btn--glass-green:hover {
+    background: rgba(155, 197, 61, 0.05) !important;
+    border-color: var(--dot-green) !important;
+}
+
+.btn--glass-red {
+    color: var(--dot-red) !important;
+    border-color: rgba(230, 42, 45, 0.25) !important;
+}
+
+.btn--glass-red:hover {
+    background: rgba(230, 42, 45, 0.05) !important;
+    border-color: var(--dot-red) !important;
 }
 
 /* ==========================================================================
@@ -578,7 +675,12 @@ a {
 @media (max-width: 768px) {
     .hero {
         padding: 6rem 1.5rem 4rem 1.5rem;
-        /* 모바일 Hero 여백 조정 */
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+        gap: 1rem;
+        flex-wrap: wrap; /* 모바일에서는 다시 줄바꿈 허용 */
     }
 
     .why-now {
@@ -598,7 +700,7 @@ a {
    ========================================================================== */
 .build {
     padding: var(--section-padding);
-    background-color: var(--bg-color);
+    background-color: transparent;
 }
 
 .build__grid {
@@ -772,78 +874,49 @@ a {
    Our Hearts Section
    ========================================================================== */
 .our-hearts {
-    padding: 0;
-    background-color: var(--bg-color);
-}
-
-.our-hearts__scroll-container {
-    position: relative;
-    height: 250vh; /* Scroll room for animation */
-}
-
-.our-hearts__sticky-wrapper {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
     padding: var(--section-padding);
 }
 
-.our-hearts__content {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
+.our-hearts__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    margin-top: 4rem;
 }
 
 .our-hearts__card {
-    position: absolute;
-    width: 320px;
-    min-height: 400px;
     padding: 4rem 3rem;
-    z-index: 1;
-    transition: transform 0.1s ease-out, opacity 0.3s ease;
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
-    /* Initial stacked state */
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0;
-    pointer-events: none;
-}
-
-.our-hearts__card.active {
-    opacity: 1;
-    pointer-events: auto;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .our-hearts__icon {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-bottom: 2rem;
+    background: white;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.03);
 }
 
 .our-hearts__card-title {
-    font-size: 2rem;
-    color: var(--primary-color);
+    font-size: 1.5rem;
+    color: var(--text-primary);
     margin-bottom: 1.5rem;
     font-weight: 700;
 }
 
 .our-hearts__card-text {
-    font-size: 1.4rem;
-    color: var(--text-light);
-    line-height: 1.6;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
 }
 
 
@@ -896,7 +969,7 @@ a {
 }
 
 @media (max-width: 992px) {
-    .our-hearts__content,
+    .our-hearts__grid,
     .roadmap__grid {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -1059,7 +1132,6 @@ a {
 }
 
 /* ==========================================================================
-/* ==========================================================================
    Contact Section
    ========================================================================== */
 .contact {
@@ -1122,47 +1194,6 @@ a {
     box-shadow: 0 15px 40px rgba(34, 117, 184, 0.1);
 }
 
-.hero__description {
-    font-size: 1.15rem;
-    color: var(--text-secondary);
-    margin-bottom: 3rem;
-    max-width: 580px;
-    padding: 2rem;
-}
-
-.hero__image-wrapper {
-    position: relative;
-    width: 100%;
-}
-
-.hero__image {
-    width: 100%;
-    height: auto;
-    border-radius: 4rem;
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.08);
-    transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.hero__image:hover {
-    transform: translateY(-10px) scale(1.02);
-}
-
-.hero__image-badge {
-    position: absolute;
-    bottom: 2rem;
-    left: -2rem;
-    background: white;
-    padding: 1rem 1.5rem;
-    border-radius: 100px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: var(--text-primary);
-    z-index: 3;
-}
 
 .contact__item-label {
     display: inline-block;
