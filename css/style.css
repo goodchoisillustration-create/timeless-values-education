@@ -770,6 +770,133 @@ a {
 }
 
 /* ==========================================================================
+   Development Roadmap Table
+   ========================================================================== */
+.build__table-wrapper {
+    margin-top: 5rem;
+    padding: 2.5rem;
+    overflow: hidden;
+}
+
+.build__table-header {
+    margin-bottom: 1.5rem;
+}
+
+.build__table-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    /* Custom Scrollbar */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(34, 117, 184, 0.2) transparent;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 6px;
+}
+.table-responsive::-webkit-scrollbar-thumb {
+    background-color: rgba(34, 117, 184, 0.2);
+    border-radius: 10px;
+}
+
+.roadmap-table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.roadmap-table th,
+.roadmap-table td {
+    padding: 1rem 0.8rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.roadmap-table th {
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+}
+
+.roadmap-table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.roadmap-table tbody tr:hover {
+    background-color: rgba(34, 117, 184, 0.02);
+}
+
+.roadmap-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.col-date { width: 15%; }
+.col-subject { width: 17%; }
+.col-status { width: 17%; }
+
+.td-date {
+    color: var(--text-primary);
+}
+
+.td-date.indent {
+    padding-left: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.95em;
+}
+
+.table-dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+}
+
+.empty-dash {
+    color: rgba(0,0,0,0.15);
+}
+
+/* Status Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem 0.8rem;
+    border-radius: 99px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.badge--done {
+    background-color: var(--brand-blue);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(34, 117, 184, 0.2);
+}
+
+.badge--progress {
+    background-color: rgba(34, 117, 184, 0.08);
+    color: var(--brand-blue);
+    border: 1px solid rgba(34, 117, 184, 0.15);
+}
+
+@media (max-width: 768px) {
+    .build__table-wrapper {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* ==========================================================================
    Curriculum Showcase Section
    ========================================================================== */
 .curriculum {
@@ -805,11 +932,58 @@ a {
     box-shadow: inset 0 0 40px rgba(0,0,0,0.02);
 }
 
+.curriculum__visual.hover-stack {
+    perspective: 1000px;
+    position: relative;
+    overflow: visible;
+}
+
 .curriculum__img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1));
+}
+
+/* Hover Stack UI for Curriculum Pages */
+.stack-img {
+    position: absolute;
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: center bottom;
+    border-radius: 4px;
+}
+
+.stack-img--front {
+    position: relative;
+    z-index: 3;
+}
+
+.stack-img--back1 {
+    z-index: 2;
+    transform: scale(0.92) translateY(-15px);
+    opacity: 0.8;
+}
+
+.stack-img--back2 {
+    z-index: 1;
+    transform: scale(0.85) translateY(-30px);
+    opacity: 0.5;
+}
+
+.curriculum__card:hover .stack-img--back1 {
+    transform: scale(0.95) translateX(25%) translateY(-10px) rotate(6deg);
+    opacity: 1;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
+}
+
+.curriculum__card:hover .stack-img--back2 {
+    transform: scale(0.95) translateX(-25%) translateY(-10px) rotate(-6deg);
+    opacity: 1;
+    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
+}
+
+.curriculum__card:hover .stack-img--front {
+    transform: translateY(-8px);
 }
 
 .curriculum__info {
