@@ -171,6 +171,7 @@ a {
     background: linear-gradient(135deg, var(--dot-blue), var(--dot-cyan), var(--dot-green), var(--dot-blue));
     background-size: 200% auto;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradientFlow 6s ease-in-out infinite alternate;
 }
