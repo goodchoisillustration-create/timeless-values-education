@@ -1500,6 +1500,47 @@ a {
     background-color: var(--brand-cyan);
 }
 
+.sponsorship-note {
+    margin-top: 1.75rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(247, 249, 252, 0.92) 100%);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    text-align: center;
+}
+
+.sponsorship-note__eyebrow {
+    display: inline-block;
+    margin-bottom: 0.45rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    background: rgba(34, 117, 184, 0.08);
+    color: var(--brand-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.sponsorship-note__content {
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.sponsorship-note__content strong {
+    font-weight: 700;
+}
+
+.sponsorship-note__meta {
+    margin-top: 0.35rem;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
 @media (max-width: 768px) {
     .contact {
         padding: 6rem 1.5rem;
