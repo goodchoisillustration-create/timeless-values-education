@@ -1219,12 +1219,12 @@ a {
     z-index: 0;
 }
 
-.maker-card__portrait--redart {
+.maker-card__portrait--blueart {
     width: 7.4rem;
     height: 7.4rem;
 }
 
-.maker-card__portrait--redart::before {
+.maker-card__portrait--blueart::before {
     display: none;
 }
 
