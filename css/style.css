@@ -208,6 +208,7 @@ a {
     display: block;
     margin-top: 0.42em;
     color: var(--brand-blue);
+    font-weight: 700;
 }
 
 /* Editorial Line Accents */
@@ -479,7 +480,7 @@ a {
     max-width: 850px;
     margin: 0 auto var(--space-lg) auto;
     font-size: clamp(2rem, 4vw, 3.2rem);
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.15;
     letter-spacing: -0.04em;
     color: var(--text-primary);
