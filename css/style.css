@@ -469,7 +469,7 @@ a {
     letter-spacing: 0.3em;
     color: var(--brand-blue);
     text-transform: uppercase;
-    margin-bottom: var(--space-md);
+    margin-bottom: 2.5rem;
     opacity: 0.9;
 }
 
