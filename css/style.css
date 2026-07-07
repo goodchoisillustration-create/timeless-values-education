@@ -507,7 +507,8 @@ a {
     display: flex;
     gap: 0.8rem;
     justify-content: flex-start;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .btn {
@@ -524,6 +525,8 @@ a {
     border: none;
     cursor: pointer;
     text-decoration: none;
+    flex: 0 0 auto;
+    white-space: nowrap;
 }
 
 .btn-dot {
@@ -725,7 +728,7 @@ a {
     .hero__buttons {
         flex-direction: column;
         gap: 1rem;
-        flex-wrap: wrap; /* 모바일에서는 다시 줄바꿈 허용 */
+        flex-wrap: nowrap;
     }
 
     .why-now {
