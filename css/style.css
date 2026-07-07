@@ -1006,7 +1006,7 @@ a {
     gap: var(--space-xl);
     align-items: center;
     padding: var(--space-lg);
-    overflow: visible;
+    overflow: hidden;
 }
 
 .curriculum__visual {
@@ -1025,7 +1025,6 @@ a {
     perspective: 1000px;
     position: relative;
     overflow: visible;
-    min-height: 34rem;
 }
 
 .curriculum__img {
@@ -1041,42 +1040,42 @@ a {
     transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
     transform-origin: center bottom;
     border-radius: 6px;
-    width: clamp(15rem, 18vw, 20rem);
+    width: clamp(13rem, 16vw, 18rem);
     height: auto;
 }
 
 .stack-img--front {
     position: relative;
     z-index: 3;
-    width: clamp(18rem, 22vw, 24rem);
+    width: clamp(15rem, 19vw, 21rem);
 }
 
 .stack-img--back1 {
     z-index: 2;
-    transform: scale(0.88) translateY(0);
+    transform: scale(0.9) translateY(0);
     opacity: 0;
 }
 
 .stack-img--back2 {
     z-index: 1;
-    transform: scale(0.88) translateY(0);
+    transform: scale(0.9) translateY(0);
     opacity: 0;
 }
 
 .curriculum__card:hover .stack-img--back1 {
-    transform: scale(0.92) translateX(14%) translateY(-8px) rotate(4deg);
+    transform: scale(0.95) translateX(25%) translateY(-10px) rotate(6deg);
     opacity: 1;
     filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
 }
 
 .curriculum__card:hover .stack-img--back2 {
-    transform: scale(0.92) translateX(-14%) translateY(-8px) rotate(-4deg);
+    transform: scale(0.95) translateX(-25%) translateY(-10px) rotate(-6deg);
     opacity: 1;
     filter: drop-shadow(0 15px 25px rgba(0,0,0,0.15));
 }
 
 .curriculum__card:hover .stack-img--front {
-    transform: translateY(-4px);
+    transform: translateY(-8px);
 }
 
 .curriculum__info {
@@ -1133,14 +1132,6 @@ a {
 
     .curriculum__visual {
         aspect-ratio: 1/1;
-    }
-
-    .stack-img {
-        width: clamp(12rem, 48vw, 16rem);
-    }
-
-    .stack-img--front {
-        width: clamp(14rem, 56vw, 18rem);
     }
 }
 
