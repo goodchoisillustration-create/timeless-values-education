@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap');
 
 :root {
     /* Background & Neutral - Premium Light Mode */
@@ -39,8 +40,8 @@
     --container-width: 1300px; /* Slightly wider */
 
     /* Typography */
-    --font-heading: 'Gowun Dodum', sans-serif;
-    --font-body: 'Inter', sans-serif;
+    --font-heading: 'Noto Serif KR', serif;
+    --font-body: 'Pretendard', sans-serif;
     --line-height-relaxed: 1.6;
 }
 
@@ -107,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     color: var(--text-primary);
     letter-spacing: -0.02em;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .container {
@@ -686,7 +687,7 @@ a {
 
 .section-title {
     font-size: clamp(2.4rem, 5vw, 3.6rem);
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.03em;
     color: var(--text-primary);
@@ -916,7 +917,7 @@ a {
 
 .build__table-title {
     font-size: 1.6rem;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--text-primary);
 }
 
@@ -1216,7 +1217,7 @@ a {
     font-size: 1.5rem;
     color: var(--text-primary);
     margin-bottom: 1.5rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .our-hearts__card-text {
@@ -1279,7 +1280,7 @@ a {
     font-size: 1.55rem;
     color: var(--text-primary);
     margin-bottom: 0.6rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.25;
 }
 
@@ -1287,7 +1288,7 @@ a {
     font-size: 1rem;
     color: var(--brand-blue);
     line-height: 1.5;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 0.9rem;
 }
 
@@ -1366,7 +1367,7 @@ a {
     cursor: pointer;
     text-align: left;
     font-size: 1.4rem;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--text-primary);
     transition: all 0.4s ease;
 }
@@ -1547,7 +1548,7 @@ a {
 
 .contact__item-link {
     font-size: 1.2rem;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--brand-blue);
     position: relative;
     padding-bottom: 2px;
