@@ -319,7 +319,7 @@ a {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 20rem var(--space-md) 10rem var(--space-md);
+    padding: 11rem var(--space-md) 7rem var(--space-md);
     position: relative;
     overflow: hidden;
     background: radial-gradient(circle at 50% 50%, #faf9f8 0%, #f5f3f0 100%);
