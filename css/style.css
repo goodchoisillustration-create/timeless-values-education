@@ -1228,12 +1228,12 @@ a {
     display: none;
 }
 
-.maker-card__portrait--whiteart {
+.maker-card__portrait--tealart {
     width: 7.4rem;
     height: 7.4rem;
 }
 
-.maker-card__portrait--whiteart::before {
+.maker-card__portrait--tealart::before {
     display: none;
 }
 
