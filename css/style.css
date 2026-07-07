@@ -418,9 +418,10 @@ a {
 
 .testimonials__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 3rem;
-    margin-top: 4rem;
+    margin: 4rem auto 0;
+    max-width: 1100px;
 }
 
 .testimonial-card {
@@ -769,6 +770,13 @@ a {
         grid-template-columns: 1fr;
         /* 모바일 1열 배치 */
         gap: 1.5rem;
+    }
+
+    .testimonials__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: none;
+        margin-top: 3rem;
     }
 }
 
