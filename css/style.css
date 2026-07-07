@@ -165,14 +165,10 @@ a {
 .bg-soft-yellow { background-color: rgba(255, 200, 0, 0.03); }
 
 /* ==========================================================================
-   WOW Color Points & Visual Sensations
+   Brand Accents
    ========================================================================== */
-.text-gradient {
-    background: linear-gradient(135deg, var(--dot-blue), var(--dot-cyan), var(--dot-green));
-    background-size: 100% auto;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+.hero__title-accent {
+    color: var(--brand-blue);
 }
 
 /* Editorial Line Accents */
