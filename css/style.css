@@ -516,24 +516,6 @@ a {
     transform: translateY(-10px) scale(1.02);
 }
 
-.hero__image-badge {
-    position: absolute;
-    bottom: 2rem;
-    left: -2rem;
-    background: white;
-    padding: 0.9rem 1.2rem;
-    border-radius: 0.9rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    font-weight: 700;
-    font-size: 0.9rem;
-    color: var(--text-primary);
-    z-index: 3;
-}
-
-
 /* ==========================================================================
    Buttons
    ========================================================================== */
@@ -768,13 +750,6 @@ a {
 @media (max-width: 768px) {
     .hero {
         padding: 6rem 1.5rem 4rem 1.5rem;
-    }
-
-    .hero__image-badge {
-        left: 1rem;
-        bottom: 1rem;
-        padding: 0.75rem 1rem;
-        max-width: calc(100% - 2rem);
     }
 
     .hero__buttons {
