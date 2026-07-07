@@ -1228,6 +1228,15 @@ a {
     display: none;
 }
 
+.maker-card__portrait--whiteart {
+    width: 7.4rem;
+    height: 7.4rem;
+}
+
+.maker-card__portrait--whiteart::before {
+    display: none;
+}
+
 .maker-card__portrait-img {
     position: relative;
     z-index: 1;
