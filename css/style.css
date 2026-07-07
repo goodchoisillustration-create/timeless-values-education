@@ -1,5 +1,5 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
 
 :root {
     /* Background & Neutral - Premium Light Mode */
@@ -40,7 +40,7 @@
     --container-width: 1300px; /* Slightly wider */
 
     /* Typography */
-    --font-heading: 'Noto Serif KR', serif;
+    --font-heading: 'Noto Sans KR', sans-serif;
     --font-body: 'Pretendard', sans-serif;
     --line-height-relaxed: 1.6;
 }
@@ -453,7 +453,7 @@ a {
     left: -1rem;
     font-size: 5rem;
     color: rgba(0, 0, 0, 0.05);
-    font-family: serif;
+    font-family: var(--font-heading);
 }
 
 .testimonial-author {
