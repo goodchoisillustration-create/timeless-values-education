@@ -205,6 +205,8 @@ a {
    Brand Accents
    ========================================================================== */
 .hero__title-accent {
+    display: block;
+    margin-top: 0.42em;
     color: var(--brand-blue);
 }
 
