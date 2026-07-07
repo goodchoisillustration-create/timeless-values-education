@@ -517,8 +517,8 @@ a {
     bottom: 2rem;
     left: -2rem;
     background: white;
-    padding: 1rem 1.5rem;
-    border-radius: 100px;
+    padding: 0.9rem 1.2rem;
+    border-radius: 0.9rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     display: flex;
     align-items: center;
@@ -753,6 +753,13 @@ a {
 @media (max-width: 768px) {
     .hero {
         padding: 6rem 1.5rem 4rem 1.5rem;
+    }
+
+    .hero__image-badge {
+        left: 1rem;
+        bottom: 1rem;
+        padding: 0.75rem 1rem;
+        max-width: calc(100% - 2rem);
     }
 
     .hero__buttons {
@@ -1220,55 +1227,88 @@ a {
    Roadmap Section
    ========================================================================== */
 .roadmap {
-    padding: var(--section-padding);
-    background-color: #f5f3f0;
-    text-align: center;
+    margin-top: 5rem;
+    text-align: left;
+}
+
+.roadmap__header {
+    margin-bottom: 2rem;
+}
+
+.roadmap__summary {
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
 }
 
 .roadmap__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
     margin: 0 auto;
     position: relative;
     max-width: 1200px;
 }
 
 .roadmap__item {
-    padding: 4.5rem 3.5rem;
+    padding: 2rem;
     position: relative;
-    text-align: center;
+    text-align: left;
+    min-height: 100%;
 }
 
 .roadmap__year {
-    display: inline-block;
-    padding: 0.6rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 0.95rem;
     background-color: var(--brand-blue);
     color: #fff;
-    border-radius: 5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    margin-bottom: 2.5rem;
+    border-radius: 0.8rem;
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.06em;
 }
 
 .roadmap__subject {
-    font-size: 2.4rem;
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
+    font-size: 1.55rem;
+    color: var(--text-primary);
+    margin-bottom: 0.6rem;
     font-weight: 700;
+    line-height: 1.25;
 }
 
 .roadmap__desc {
-    font-size: 1.6rem;
-    color: var(--text-light);
-    line-height: 1.6;
+    font-size: 1rem;
+    color: var(--brand-blue);
+    line-height: 1.5;
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+}
+
+.roadmap__meta {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
 }
 
 @media (max-width: 992px) {
     .our-hearts__grid,
     .roadmap__grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .roadmap {
+        margin-top: 3.5rem;
+    }
+
+    .roadmap__item {
+        padding: 1.5rem;
     }
 }
 
