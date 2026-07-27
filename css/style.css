@@ -1858,6 +1858,24 @@ a {
     display: none;
 }
 
+.maker-card__portrait--squareart {
+    width: 7.6rem;
+    height: 7.6rem;
+    border-radius: 1.45rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+.maker-card__portrait--squareart::before {
+    display: none;
+}
+
+.maker-card__portrait--squareart .maker-card__portrait-img {
+    object-fit: contain;
+    padding: 0.35rem;
+}
+
 .maker-card__portrait-img {
     position: relative;
     z-index: 1;
