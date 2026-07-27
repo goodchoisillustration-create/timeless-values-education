@@ -400,8 +400,12 @@ a {
 }
 
 .home-reviews__stories-header {
-    margin-top: 5rem;
+    margin-top: 6rem;
     margin-bottom: 2rem;
+}
+
+.home-reviews .gallery-carousel {
+    margin-bottom: 5rem;
 }
 
 .home-reviews__footer {
@@ -2647,10 +2651,14 @@ a {
     }
 
     .home-reviews__stories-header {
-        margin-top: 4rem;
+        margin-top: 4.75rem;
     }
 
     .home-reviews__footer {
         margin-top: 2rem;
+    }
+
+    .home-reviews .gallery-carousel {
+        margin-bottom: 3.5rem;
     }
 }
