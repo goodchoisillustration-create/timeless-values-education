@@ -456,6 +456,36 @@ a {
     border-top: 1px solid rgba(0, 0, 0, 0.06);
 }
 
+.testimonial-body--gallery {
+    display: grid;
+    gap: 1rem;
+}
+
+.testimonial-body__gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+    gap: 0.6rem;
+    margin-top: 0.25rem;
+    max-width: 100%;
+}
+
+.testimonial-body__gallery-item {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 0.85rem;
+    aspect-ratio: 0.82 / 1;
+    background: #f7f8fb;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+}
+
+.testimonial-body__gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .testimonial-featured {
     margin-top: 4rem;
     padding: 2rem;
