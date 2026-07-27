@@ -903,30 +903,144 @@ a {
    ========================================================================== */
 @media (max-width: 768px) {
     .hero {
-        padding: 6rem 1.5rem 4rem 1.5rem;
+        min-height: auto;
+        padding: 6.5rem 1rem 4.5rem;
+        align-items: flex-start;
+    }
+
+    .hero__container {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+    }
+
+    .hero__content {
+        text-align: center;
+    }
+
+    .hero__label {
+        margin-bottom: 1.25rem;
+    }
+
+    .hero__title {
+        margin-bottom: 1rem;
+        font-size: clamp(2rem, 8.5vw, 2.8rem);
+    }
+
+    .hero__description {
+        margin-bottom: 1.5rem;
+        padding: 1.2rem 1.1rem;
+        font-size: 0.98rem;
+    }
+
+    .hero__image-wrapper {
+        max-width: 30rem;
+        margin: 0 auto;
+    }
+
+    .hero__image {
+        border-radius: 1.15rem;
     }
 
     .hero__buttons {
         grid-template-columns: 1fr;
         width: 100%;
+        margin-top: 0.25rem;
+    }
+
+    .btn {
+        min-height: 4.1rem;
+        white-space: normal;
+        font-size: 0.96rem;
+    }
+
+    .nav__pill {
+        gap: 0.35rem;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding-bottom: 0.25rem;
+        scrollbar-width: none;
+    }
+
+    .nav__pill::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav__link {
+        flex: 0 0 auto;
+        padding: 0.5rem 0.85rem;
+        font-size: 0.84rem;
+    }
+
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-title {
+        font-size: clamp(2rem, 8vw, 2.7rem);
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
     }
 
     .why-now {
-        padding: 4rem 1.5rem;
-        /* 모바일 전역 섹션 여백 조정 */
+        padding: 4rem 1rem;
     }
 
     .why-now__cards {
         grid-template-columns: 1fr;
-        /* 모바일 1열 배치 */
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
     .testimonials__grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.1rem;
         max-width: none;
-        margin-top: 3rem;
+        margin-top: 2.25rem;
+    }
+
+    .testimonial-card {
+        padding: 1.4rem;
+        border-radius: 1.4rem;
+    }
+
+    .testimonial-text {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .testimonial-text::before {
+        top: -1.4rem;
+        left: -0.6rem;
+        font-size: 3.6rem;
+    }
+
+    .testimonial-author {
+        gap: 0.7rem;
+        font-size: 0.92rem;
+    }
+
+    .testimonial-toggle {
+        margin-top: 0.85rem;
+    }
+
+    .testimonial-body {
+        margin-top: 0.85rem;
+        padding-top: 0.85rem;
+    }
+
+    .testimonial-body--gallery {
+        gap: 0.85rem;
+    }
+
+    .testimonial-body__gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+
+    .testimonial-body__gallery-item {
+        border-radius: 0.7rem;
     }
 
     .testimonial-featured {
@@ -941,29 +1055,169 @@ a {
     }
 
     .testimonial-featured__gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
     }
-}
 
-/* ==========================================================================
-   What We Build Section (Split Layout)
-   ========================================================================== */
-.build {
-    padding: var(--section-padding);
-    background-color: transparent;
-}
+    .testimonial-featured__gallery-item {
+        aspect-ratio: 0.85 / 1;
+    }
 
-.build__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xl);
-    align-items: stretch;
-}
+    .home-reviews__stories-header {
+        margin-top: 4rem;
+        margin-bottom: 1.5rem;
+    }
 
-.build__content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+    .home-reviews .gallery-carousel {
+        margin-bottom: 6rem;
+    }
+
+    .page-section {
+        padding: 0 1rem 5rem;
+    }
+
+    .page-section--gallery-first {
+        padding-top: 10.5rem;
+    }
+
+    .page-section--gallery-first .section-header {
+        margin-top: 0.5rem;
+    }
+
+    .gallery-carousel {
+        margin-top: 1.75rem;
+    }
+
+    .gallery-carousel__viewport::before,
+    .gallery-carousel__viewport::after {
+        width: 1rem;
+    }
+
+    .gallery-carousel__controls {
+        padding: 0 0.25rem;
+    }
+
+    .gallery-carousel__button {
+        width: 2.4rem;
+        height: 2.4rem;
+        font-size: 1.35rem;
+    }
+
+    .gallery-card {
+        flex: 0 0 clamp(220px, 84vw, 320px);
+    }
+
+    .page-hero {
+        padding: 8.25rem 1rem 3.25rem;
+    }
+
+    .page-hero__layout,
+    .philosophy-hero__layout,
+    .build__grid,
+    .curriculum__card,
+    .our-hearts__grid,
+    .faq__accordion {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .page-hero__title {
+        font-size: clamp(2.2rem, 10vw, 3rem);
+    }
+
+    .page-hero__lead {
+        font-size: 1rem;
+        line-height: 1.75;
+    }
+
+    .philosophy-hero {
+        padding-top: 10.5rem;
+        padding-bottom: 8rem;
+    }
+
+    .philosophy-page .page-section:first-of-type {
+        padding-top: 10rem;
+    }
+
+    .philosophy-page .page-section:first-of-type .page-section__inner {
+        padding-top: 2rem;
+    }
+
+    .philosophy-hero__content,
+    .philosophy-hero__simple {
+        text-align: center;
+        align-items: center;
+    }
+
+    .philosophy-hero__meta {
+        margin-top: 1rem;
+    }
+
+    .philosophy-hero__visual {
+        max-width: none;
+    }
+
+    .philosophy-hero__image-frame,
+    .philosophy-hero__quote {
+        max-width: none;
+        width: 100%;
+    }
+
+    .curriculum__showcase {
+        gap: 2rem;
+    }
+
+    .curriculum__card {
+        padding: 1.25rem;
+    }
+
+    .curriculum__visual {
+        aspect-ratio: 1 / 1.12;
+        padding: 0.85rem;
+    }
+
+    .curriculum__info {
+        padding-right: 0;
+    }
+
+    .curriculum__item-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .curriculum__item-desc {
+        font-size: 1rem;
+    }
+
+    .contact {
+        padding: 5rem 1rem;
+    }
+
+    .contact .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .contact__info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    .contact__item {
+        max-width: none;
+        padding: 1.6rem 1.25rem;
+    }
+
+    .home-reviews__footer {
+        margin-top: 1.75rem;
+    }
+
+    .btn--outline-minimal {
+        width: 100%;
+        max-width: 320px;
+        padding: 0.95rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
 /* Remove extra bottom space on section-header inside build */
