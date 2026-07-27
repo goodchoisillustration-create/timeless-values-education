@@ -674,11 +674,13 @@ a {
    Buttons
    ========================================================================== */
 .hero__buttons {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     gap: 1rem;
-    width: min(100%, 980px);
-    margin-top: 0.5rem;
+    width: auto;
+    max-width: 360px;
+    margin-top: 0.75rem;
 }
 
 .btn {
@@ -742,6 +744,28 @@ a {
     text-shadow: none !important;
     box-shadow: 0 4px 15px rgba(0,0,0,0.03) !important;
     color: var(--text-primary) !important;
+}
+
+.hero__buttons .btn--glass-cyan {
+    min-width: 300px;
+    width: auto;
+    padding: 1rem 1.8rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 252, 252, 0.94) 100%) !important;
+    border: 1.5px solid rgba(0, 137, 135, 0.18) !important;
+    box-shadow:
+        0 10px 24px rgba(0, 137, 135, 0.09),
+        0 0 0 1px rgba(255, 255, 255, 0.8) inset !important;
+    color: var(--brand-cyan) !important;
+    letter-spacing: -0.02em;
+}
+
+.hero__buttons .btn--glass-cyan:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(233, 249, 248, 0.98) 100%) !important;
+    box-shadow:
+        0 16px 34px rgba(0, 137, 135, 0.14),
+        0 0 0 1px rgba(0, 137, 135, 0.08) inset !important;
 }
 
 .btn--glass:hover {
@@ -948,7 +972,14 @@ a {
     .hero__buttons {
         grid-template-columns: 1fr;
         width: 100%;
+        max-width: none;
         margin-top: 0.35rem;
+    }
+
+    .hero__buttons .btn--glass-cyan {
+        width: 100%;
+        min-width: 0;
+        padding: 1rem 1.2rem;
     }
 
     .btn {
