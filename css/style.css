@@ -923,7 +923,11 @@ a {
 
     .hero__title {
         margin-bottom: 1rem;
-        font-size: clamp(2rem, 8.5vw, 2.8rem);
+        max-width: 12ch;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: clamp(1.9rem, 8vw, 2.35rem);
+        line-height: 1.08;
     }
 
     .hero__description {
@@ -1169,6 +1173,7 @@ a {
 
     .curriculum__card {
         padding: 1.25rem;
+        gap: 1.25rem;
     }
 
     .curriculum__visual {
@@ -1181,12 +1186,19 @@ a {
     }
 
     .curriculum__item-title {
-        font-size: 1.6rem;
-        margin-bottom: 0.8rem;
+        font-size: 1.18rem;
+        line-height: 1.18;
+        letter-spacing: -0.04em;
+        margin-bottom: 0.7rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .curriculum__item-desc {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        word-break: keep-all;
     }
 
     .contact {
@@ -1197,15 +1209,28 @@ a {
         margin-bottom: 2.5rem;
     }
 
+    .contact__container {
+        max-width: none;
+        width: 100%;
+    }
+
     .contact__info {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 1rem;
         margin-top: 2.5rem;
     }
 
     .contact__item {
+        width: 100%;
         max-width: none;
-        padding: 1.6rem 1.25rem;
+        padding: 1.5rem 1.15rem;
+    }
+
+    .sponsorship-note {
+        width: 100%;
+        margin-top: 1rem;
+        padding: 0.95rem 1rem;
     }
 
     .home-reviews__footer {
@@ -2211,7 +2236,8 @@ a {
     }
 
     .contact__info {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 1.5rem;
     }
     
