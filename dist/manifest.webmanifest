@@ -1,0 +1,18 @@
+{
+  "name": "YJ PERSONAL OS",
+  "short_name": "YJ OS",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f5ef",
+  "theme_color": "#f7f5ef",
+  "description": "개인 일정관리와 TOEFL 학습을 하나로 묶은 모바일 우선 개인용 PWA.",
+  "icons": [
+    {
+      "src": "images/personal-os-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
