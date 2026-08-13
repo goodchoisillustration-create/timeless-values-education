@@ -36,92 +36,110 @@
 
     <main class="views">
       <section class="view is-active" data-view="TODAY" aria-labelledby="today-title">
-        <div class="hero-grid">
-          <article class="panel panel--stack panel--hero">
-            <p class="panel__eyebrow">daily</p>
-            <h2 id="today-title" class="hero-title">today</h2>
-            <p class="hero-copy">일정, 할 일, TOEFL 복습을 10초 안에 기록하고 다시 꺼낼 수 있게 만든 개인 운영 화면.</p>
+        <div class="cover-stage">
+          <p class="cover-kicker">TOOLS</p>
+          <article class="browser-frame" aria-label="YJ PERSONAL OS editorial board">
+            <div class="browser-frame__chrome" aria-hidden="true">
+              <div class="browser-frame__dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="browser-frame__bar">yj-personal-os.local</div>
+              <div class="browser-frame__icons">
+                <span></span><span></span><span></span>
+              </div>
+            </div>
 
-            <div class="hero-metrics">
-              <div>
-                <span class="metric-label">TODAY TASKS</span>
-                <strong data-today-task-count>0</strong>
+            <div class="browser-frame__surface">
+              <div class="browser-grid">
+                <article class="panel panel--stack panel--hero">
+                  <p class="panel__eyebrow">daily</p>
+                  <h2 id="today-title" class="hero-title">today</h2>
+                  <p class="hero-copy">일정, 할 일, TOEFL 복습을 10초 안에 기록하고 다시 꺼낼 수 있게 만든 개인 운영 화면.</p>
+
+                  <div class="hero-metrics">
+                    <div>
+                      <span class="metric-label">TODAY TASKS</span>
+                      <strong data-today-task-count>0</strong>
+                    </div>
+                    <div>
+                      <span class="metric-label">DONE</span>
+                      <strong data-today-done-count>0</strong>
+                    </div>
+                    <div>
+                      <span class="metric-label">TOEFL DUE</span>
+                      <strong data-due-count>0</strong>
+                    </div>
+                  </div>
+                </article>
+
+                <article class="panel panel--clock">
+                  <div class="panel__header">
+                    <p class="panel__eyebrow">8.10.MON</p>
+                    <div class="panel__tiny" data-live-clock>--:--</div>
+                  </div>
+                  <div class="clock" aria-hidden="true">
+                    <span class="clock__hand clock__hand--hour" data-clock-hour></span>
+                    <span class="clock__hand clock__hand--minute" data-clock-minute></span>
+                    <span class="clock__hand clock__hand--second" data-clock-second></span>
+                    <span class="clock__center"></span>
+                  </div>
+                  <div class="panel__footer">
+                    <p class="panel__label">NEXT SCHEDULE</p>
+                    <p class="panel__value" data-next-schedule>--</p>
+                  </div>
+                </article>
+
+                <article class="panel panel--list">
+                  <div class="panel__header">
+                    <p class="panel__eyebrow">to do</p>
+                    <button class="text-button" type="button" data-open-capture="task">+ add</button>
+                  </div>
+                  <div class="table-shell" data-today-task-list></div>
+                </article>
               </div>
-              <div>
-                <span class="metric-label">DONE</span>
-                <strong data-today-done-count>0</strong>
-              </div>
-              <div>
-                <span class="metric-label">TOEFL DUE</span>
-                <strong data-due-count>0</strong>
+
+              <div class="browser-base">
+                <article class="panel">
+                  <div class="panel__header">
+                    <p class="panel__eyebrow">memo</p>
+                    <button class="text-button" type="button" data-open-capture="memo">+ memo</button>
+                  </div>
+                  <div class="memo-stack" data-today-memo-list></div>
+                </article>
+
+                <article class="panel">
+                  <div class="panel__header">
+                    <p class="panel__eyebrow">today schedule</p>
+                    <button class="text-button" type="button" data-open-capture="schedule">+ schedule</button>
+                  </div>
+                  <div class="timeline" data-today-schedule-list></div>
+                </article>
+
+                <article class="panel panel--rail">
+                  <div class="panel__header">
+                    <p class="panel__eyebrow">toefl today</p>
+                    <button class="text-button" type="button" data-view-jump="TOEFL">open</button>
+                  </div>
+                  <div class="rail-grid">
+                    <div>
+                      <span class="metric-label">DAY</span>
+                      <strong data-toefl-day>03</strong>
+                    </div>
+                    <div>
+                      <span class="metric-label">ACCURACY</span>
+                      <strong data-toefl-accuracy>86%</strong>
+                    </div>
+                    <div>
+                      <span class="metric-label">REVIEW</span>
+                      <strong data-toefl-review>0</strong>
+                    </div>
+                  </div>
+                </article>
               </div>
             </div>
           </article>
-
-          <article class="panel panel--clock">
-            <div class="panel__header">
-              <p class="panel__eyebrow">CURRENT TIME</p>
-              <div class="panel__tiny" data-live-clock>--:--</div>
-            </div>
-            <div class="clock" aria-hidden="true">
-              <span class="clock__hand clock__hand--hour" data-clock-hour></span>
-              <span class="clock__hand clock__hand--minute" data-clock-minute></span>
-              <span class="clock__hand clock__hand--second" data-clock-second></span>
-              <span class="clock__center"></span>
-            </div>
-            <div class="panel__footer">
-              <p class="panel__label">NEXT SCHEDULE</p>
-              <p class="panel__value" data-next-schedule>--</p>
-            </div>
-          </article>
-
-          <article class="panel panel--list">
-            <div class="panel__header">
-              <p class="panel__eyebrow">to do</p>
-              <button class="text-button" type="button" data-open-capture="task">+ add</button>
-            </div>
-            <div class="table-shell" data-today-task-list></div>
-          </article>
+          <p class="cover-caption">일정 관리 도구</p>
         </div>
-
-        <div class="detail-grid">
-          <article class="panel">
-            <div class="panel__header">
-              <p class="panel__eyebrow">today schedule</p>
-              <button class="text-button" type="button" data-open-capture="schedule">+ schedule</button>
-            </div>
-            <div class="timeline" data-today-schedule-list></div>
-          </article>
-
-          <article class="panel">
-            <div class="panel__header">
-              <p class="panel__eyebrow">memo</p>
-              <button class="text-button" type="button" data-open-capture="memo">+ memo</button>
-            </div>
-            <div class="memo-stack" data-today-memo-list></div>
-          </article>
-        </div>
-
-        <article class="panel panel--rail">
-          <div class="panel__header">
-            <p class="panel__eyebrow">toefl today</p>
-            <button class="text-button" type="button" data-view-jump="TOEFL">open</button>
-          </div>
-          <div class="rail-grid">
-            <div>
-              <span class="metric-label">DAY</span>
-              <strong data-toefl-day>03</strong>
-            </div>
-            <div>
-              <span class="metric-label">ACCURACY</span>
-              <strong data-toefl-accuracy>86%</strong>
-            </div>
-            <div>
-              <span class="metric-label">REVIEW</span>
-              <strong data-toefl-review>0</strong>
-            </div>
-          </div>
-        </article>
       </section>
 
       <section class="view" data-view="PLAN" aria-labelledby="plan-title">
