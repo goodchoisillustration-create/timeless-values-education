@@ -1760,10 +1760,10 @@ a {
 
 .our-hearts__grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 2rem;
     margin: 4rem auto 0;
-    max-width: 1160px;
+    max-width: 1360px;
 }
 
 .our-hearts__card {
