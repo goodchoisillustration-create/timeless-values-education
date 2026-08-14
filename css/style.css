@@ -1672,6 +1672,23 @@ a {
     object-fit: contain;
 }
 
+.institution-card__icon {
+    display: block;
+    flex: 0 0 auto;
+    width: 7rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.institution-card--families {
+    gap: 0.75rem;
+}
+
+.institution-card__icon--families {
+    width: 5.25rem;
+    margin-top: 0.4rem;
+}
+
 .institution-card__mark {
     display: inline-flex;
     align-items: center;
@@ -1757,6 +1774,8 @@ a {
     justify-content: flex-start;
     gap: 1.25rem;
     min-height: 100%;
+    --maker-accent: var(--dot-cyan);
+    --maker-accent-soft: rgba(0, 137, 135, 0.08);
 }
 
 .maker-card__top {
@@ -1872,13 +1891,17 @@ a {
 }
 
 .maker-card__eyebrow {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.32rem 0.7rem;
+    border-radius: 999px;
     font-size: 0.74rem;
     font-weight: 800;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--text-light);
-    margin-bottom: 0.35rem;
+    color: var(--maker-accent);
+    background: var(--maker-accent-soft);
+    margin-bottom: 0.55rem;
 }
 
 .maker-card__name {
@@ -1924,7 +1947,7 @@ a {
     width: 0.38rem;
     height: 0.38rem;
     border-radius: 50%;
-    background: var(--brand-cyan);
+    background: var(--maker-accent);
 }
 
 .maker-card__quote {
@@ -1932,7 +1955,8 @@ a {
     padding: 1rem 1.1rem;
     border-radius: 1rem;
     background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--maker-accent-soft);
+    border-left: 4px solid var(--maker-accent);
     font-size: 0.98rem;
     line-height: 1.7;
     color: var(--text-primary);
@@ -1940,7 +1964,7 @@ a {
 
 .maker-card__quote::before {
     content: '“';
-    color: var(--brand-cyan);
+    color: var(--maker-accent);
     font-weight: 800;
     margin-right: 0.25rem;
 }
@@ -3158,6 +3182,14 @@ a {
     .institution-card__media img {
         max-width: min(100%, 12.5rem);
         max-height: 6.2rem;
+    }
+
+    .institution-card__icon {
+        width: 6.25rem;
+    }
+
+    .institution-card__icon--families {
+        width: 4.85rem;
     }
 
     .institution-card__mark {
