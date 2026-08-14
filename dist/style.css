@@ -1685,8 +1685,8 @@ a {
 }
 
 .institution-card__icon--families {
-    width: 5.25rem;
-    margin-top: 0.4rem;
+    width: 7.2rem;
+    margin-top: 0.15rem;
 }
 
 .institution-card__mark {
@@ -3194,7 +3194,7 @@ a {
     }
 
     .institution-card__icon--families {
-        width: 4.85rem;
+        width: 6rem;
     }
 
     .institution-card__mark {
