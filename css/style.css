@@ -678,8 +678,8 @@ a {
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    width: fit-content;
-    max-width: 100%;
+    width: auto;
+    max-width: 360px;
     margin-top: 0.75rem;
 }
 
@@ -747,9 +747,9 @@ a {
 }
 
 .hero__buttons .btn--glass-cyan {
-    min-width: 240px;
+    min-width: 300px;
     width: auto;
-    padding: 0.92rem 1.45rem;
+    padding: 1rem 1.8rem;
     border-radius: 999px;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(245, 252, 252, 0.94) 100%) !important;
     border: 1.5px solid rgba(0, 137, 135, 0.18) !important;
@@ -1646,30 +1646,29 @@ a {
 }
 
 .institution-card {
-    padding: 2rem 1.75rem 2.1rem;
+    padding: 2rem 1.75rem;
     border-radius: 1.5rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    min-height: 17.5rem;
+    min-height: 15rem;
 }
 
 .institution-card__media {
     width: 100%;
-    min-height: 10.2rem;
+    min-height: 7.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.2rem 0.2rem 0;
+    padding: 0.5rem 0.25rem 0.25rem;
 }
 
 .institution-card__media img {
     display: block;
-    width: 100%;
-    max-width: min(100%, 20rem);
-    max-height: 10rem;
+    max-width: min(100%, 15rem);
+    max-height: 6.8rem;
     object-fit: contain;
 }
 
@@ -1856,24 +1855,6 @@ a {
 
 .maker-card__portrait--greenart::before {
     display: none;
-}
-
-.maker-card__portrait--squareart {
-    width: 7.6rem;
-    height: 7.6rem;
-    border-radius: 1.45rem;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.8);
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.04);
-}
-
-.maker-card__portrait--squareart::before {
-    display: none;
-}
-
-.maker-card__portrait--squareart .maker-card__portrait-img {
-    object-fit: contain;
-    padding: 0.35rem;
 }
 
 .maker-card__portrait-img {
@@ -3171,12 +3152,12 @@ a {
     }
 
     .institution-card__media {
-        min-height: 7.75rem;
+        min-height: 6rem;
     }
 
     .institution-card__media img {
-        max-width: min(100%, 15rem);
-        max-height: 7.5rem;
+        max-width: min(100%, 11rem);
+        max-height: 5rem;
     }
 
     .institution-card__mark {
