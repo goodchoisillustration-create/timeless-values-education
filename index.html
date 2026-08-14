@@ -1,368 +1,292 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#f7f5ef" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="YJ PERSONAL OS" />
-  <meta name="description" content="개인 일정관리와 TOEFL 학습을 하나로 묶은 모바일 우선 개인용 PWA." />
-  <title>YJ PERSONAL OS</title>
-  <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="apple-touch-icon" href="images/personal-os-icon.svg" />
-  <link rel="stylesheet" href="css/personal-os.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>초시대 가치 교육</title>
+    <link rel="stylesheet" href="css/style.css?v=20260727r" />
 </head>
+
 <body>
-  <div class="app-shell">
-    <header class="topbar">
-      <div class="topbar__brand">
-        <p class="topbar__eyebrow">PERSONAL OS</p>
-        <h1>YJ PERSONAL OS</h1>
-        <p class="topbar__sub">Daily schedule · TOEFL study · quick capture</p>
-      </div>
-      <div class="topbar__meta">
-        <div class="chip chip--soft" data-now-label>08.10.MON</div>
-        <div class="chip chip--ink" data-sync-status>LOCAL</div>
-      </div>
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="logo">
+                <img src="images/TVE_logo_202503.png" alt="초시대 가치 교육" class="logo__img" />
+            </a>
+            <nav class="nav">
+                <div class="nav__pill">
+                    <a href="index.html" class="nav__link is-active">홈</a>
+                    <a href="why-now.html" class="nav__link">교육 철학</a>
+                    <a href="curriculum.html" class="nav__link">교재</a>
+                    <a href="team.html" class="nav__link">제작진</a>
+                    <a href="reviews.html" class="nav__link">후기</a>
+                    <a href="contact.html" class="nav__link btn--contact"><span class="btn-dot" style="background:var(--dot-lavender)"></span>문의</a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <nav class="main-nav" aria-label="Primary">
-      <button class="nav-tab is-active" data-view-tab="TODAY">TODAY</button>
-      <button class="nav-tab" data-view-tab="PLAN">PLAN</button>
-      <button class="nav-tab" data-view-tab="TOEFL">TOEFL</button>
-      <button class="nav-tab" data-view-tab="ARCHIVE">ARCHIVE</button>
-    </nav>
-
-    <main class="views">
-      <section class="view is-active" data-view="TODAY" aria-labelledby="today-title">
-        <div class="cover-stage">
-          <p class="cover-kicker">TOOLS</p>
-          <article class="browser-frame" aria-label="YJ PERSONAL OS editorial board">
-            <div class="browser-frame__chrome" aria-hidden="true">
-              <div class="browser-frame__dots">
-                <span></span><span></span><span></span>
-              </div>
-              <div class="browser-frame__bar">yj-personal-os.local</div>
-              <div class="browser-frame__icons">
-                <span></span><span></span><span></span>
-              </div>
+    <main>
+        <section class="hero reveal bg-soft-blue">
+            <div class="hero__visual">
+                <div class="hero__shape hero__shape--1"></div>
+                <div class="hero__shape hero__shape--2"></div>
             </div>
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <span class="hero__label">Timeless Values Education</span>
 
-            <div class="browser-frame__surface">
-              <div class="browser-grid">
-                <article class="panel panel--stack panel--hero">
-                  <p class="panel__eyebrow">daily</p>
-                  <h2 id="today-title" class="hero-title">today</h2>
-                  <p class="hero-copy">일정, 할 일, TOEFL 복습을 10초 안에 기록하고 다시 꺼낼 수 있게 만든 개인 운영 화면.</p>
+                    <h1 class="hero__title">
+                        시대를 지나도 변하지 않는 가치,<br />
+                        <span class="hero__title-accent">부모와 자녀를 잇는 교육</span>
+                    </h1>
 
-                  <div class="hero-metrics">
-                    <div>
-                      <span class="metric-label">TODAY TASKS</span>
-                      <strong data-today-task-count>0</strong>
+                    <p class="hero__description glass-block">
+                        부모와 교육자, 기독교 교육기관과 홈스쿨링 가정이 직면한 변화 속에서도<br />
+                        아이의 인성과 기독교적 세계관을 견고하게 세웁니다.
+                    </p>
+
+                    <div class="hero__buttons">
+                        <a href="https://smartstore.naver.com/soonlee" target="_blank" rel="noopener noreferrer" class="btn btn--glass btn--glass-cyan">
+                            <svg class="naver-icon" viewBox="0 0 24 24" width="16" height="16" style="fill: var(--brand-cyan); margin-right: 0.5rem;">
+                                <path d="M16.273 12.845L10.372 4.49H4.137V19.51h5.81V11.155l5.901 8.355h6.235V4.49h-5.81v8.355z"/>
+                            </svg>
+                            교과서 구입하기
+                        </a>
                     </div>
-                    <div>
-                      <span class="metric-label">DONE</span>
-                      <strong data-today-done-count>0</strong>
-                    </div>
-                    <div>
-                      <span class="metric-label">TOEFL DUE</span>
-                      <strong data-due-count>0</strong>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="panel panel--clock">
-                  <div class="panel__header">
-                    <p class="panel__eyebrow">8.10.MON</p>
-                    <div class="panel__tiny" data-live-clock>--:--</div>
-                  </div>
-                  <div class="clock" aria-hidden="true">
-                    <span class="clock__hand clock__hand--hour" data-clock-hour></span>
-                    <span class="clock__hand clock__hand--minute" data-clock-minute></span>
-                    <span class="clock__hand clock__hand--second" data-clock-second></span>
-                    <span class="clock__center"></span>
-                  </div>
-                  <div class="panel__footer">
-                    <p class="panel__label">NEXT SCHEDULE</p>
-                    <p class="panel__value" data-next-schedule>--</p>
-                  </div>
-                </article>
-
-                <article class="panel panel--list">
-                  <div class="panel__header">
-                    <p class="panel__eyebrow">to do</p>
-                    <button class="text-button" type="button" data-open-capture="task">+ add</button>
-                  </div>
-                  <div class="table-shell" data-today-task-list></div>
-                </article>
-              </div>
-
-              <div class="browser-base">
-                <article class="panel">
-                  <div class="panel__header">
-                    <p class="panel__eyebrow">memo</p>
-                    <button class="text-button" type="button" data-open-capture="memo">+ memo</button>
-                  </div>
-                  <div class="memo-stack" data-today-memo-list></div>
-                </article>
-
-                <article class="panel">
-                  <div class="panel__header">
-                    <p class="panel__eyebrow">today schedule</p>
-                    <button class="text-button" type="button" data-open-capture="schedule">+ schedule</button>
-                  </div>
-                  <div class="timeline" data-today-schedule-list></div>
-                </article>
-
-                <article class="panel panel--rail">
-                  <div class="panel__header">
-                    <p class="panel__eyebrow">toefl today</p>
-                    <button class="text-button" type="button" data-view-jump="TOEFL">open</button>
-                  </div>
-                  <div class="rail-grid">
-                    <div>
-                      <span class="metric-label">DAY</span>
-                      <strong data-toefl-day>03</strong>
-                    </div>
-                    <div>
-                      <span class="metric-label">ACCURACY</span>
-                      <strong data-toefl-accuracy>86%</strong>
-                    </div>
-                    <div>
-                      <span class="metric-label">REVIEW</span>
-                      <strong data-toefl-review>0</strong>
-                    </div>
-                  </div>
-                </article>
-              </div>
-            </div>
-          </article>
-          <p class="cover-caption">일정 관리 도구</p>
-        </div>
-      </section>
-
-      <section class="view" data-view="PLAN" aria-labelledby="plan-title">
-        <article class="section-heading">
-          <p>PLAN</p>
-          <h2 id="plan-title">schedule editor</h2>
-          <span>week view · tasks · classes · work · portfolio · TOEFL</span>
-        </article>
-
-        <div class="plan-grid">
-          <article class="panel">
-            <div class="panel__header">
-              <p class="panel__eyebrow">this week</p>
-              <button class="text-button" type="button" data-open-capture="schedule">+ schedule</button>
-            </div>
-            <div class="week-strip" data-week-strip></div>
-          </article>
-
-          <article class="panel">
-            <div class="panel__header">
-              <p class="panel__eyebrow">tasks</p>
-              <button class="text-button" type="button" data-open-capture="task">+ task</button>
-            </div>
-            <div class="table-shell" data-plan-task-list></div>
-          </article>
-
-          <article class="panel">
-            <div class="panel__header">
-              <p class="panel__eyebrow">schedule list</p>
-            </div>
-            <div class="table-shell" data-plan-schedule-list></div>
-          </article>
-        </div>
-      </section>
-
-      <section class="view" data-view="TOEFL" aria-labelledby="toefl-title">
-        <article class="section-heading section-heading--toefl">
-          <p>TOEFL</p>
-          <h2 id="toefl-title">study loop</h2>
-          <span>wordbook · flashcards · wrong answers · stats</span>
-        </article>
-
-        <article class="toefl-hero panel">
-          <div class="toefl-hero__top">
-            <div>
-              <p class="panel__eyebrow">day</p>
-              <div class="toefl-dayline">DAY <strong data-toefl-dayline>03</strong></div>
-            </div>
-            <div class="toefl-number">
-              <span data-toefl-score>12 / 14</span>
-              <small data-toefl-percent>86%</small>
-            </div>
-          </div>
-
-          <div class="toefl-tabs" role="tablist" aria-label="TOEFL sub navigation">
-            <button class="subtab is-active" type="button" data-toefl-tab="TODAY">TODAY</button>
-            <button class="subtab" type="button" data-toefl-tab="WORDS">WORDS</button>
-            <button class="subtab" type="button" data-toefl-tab="REVIEW">REVIEW</button>
-            <button class="subtab" type="button" data-toefl-tab="WRONG">WRONG</button>
-            <button class="subtab" type="button" data-toefl-tab="STATS">STATS</button>
-          </div>
-        </article>
-
-        <div class="subviews">
-          <section class="subview is-active" data-toefl-panel="TODAY">
-            <div class="two-column">
-              <article class="panel">
-                <div class="panel__header">
-                  <p class="panel__eyebrow">study record</p>
-                  <button class="text-button" type="button" data-open-capture="word">+ word</button>
                 </div>
-                <dl class="info-grid" data-toefl-today-record></dl>
-              </article>
-
-              <article class="panel">
-                <div class="panel__header">
-                  <p class="panel__eyebrow">today words</p>
-                  <button class="text-button" type="button" data-toefl-tab="WORDS">open list</button>
+                <div class="hero__image-wrapper">
+                    <img src="images/후기사진/hero-home.png" alt="초시대 가치 교육을 사용하는 아이의 모습" class="hero__image">
                 </div>
-                <div class="word-peek" data-word-peek></div>
-              </article>
             </div>
-          </section>
+        </section>
 
-          <section class="subview" data-toefl-panel="WORDS">
-            <article class="panel">
-              <div class="panel__header">
-                <p class="panel__eyebrow">wordbook</p>
-                <button class="text-button" type="button" data-open-capture="word">+ word</button>
-              </div>
-              <div class="table-shell" data-word-list></div>
-            </article>
-          </section>
+        <section class="curriculum reveal bg-soft-yellow" id="curriculum-preview">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Showcase</span>
+                    <h2 class="section-title">교재 미리보기</h2>
+                    <p class="section-subtitle">
+                        아이 스스로 배우고 점검하며 다음 배움을 준비하도록 돕는<br />
+                        <strong>하나님 중심 자기주도학습 교재</strong>입니다.
+                    </p>
+                </div>
 
-          <section class="subview" data-toefl-panel="REVIEW">
-            <div class="review-grid">
-              <article class="panel panel--review">
-                <div class="panel__header">
-                  <p class="panel__eyebrow">flashcard review</p>
-                  <span class="chip chip--soft" data-review-queue>0 due</span>
-                </div>
-                <div class="review-card" data-review-card></div>
-                <div class="review-actions">
-                  <button class="review-button review-button--good" type="button" data-review-action="know">I KNOW</button>
-                  <button class="review-button review-button--soft" type="button" data-review-action="unsure">UNSURE</button>
-                  <button class="review-button review-button--ink" type="button" data-review-action="again">AGAIN</button>
-                </div>
-              </article>
+                <div class="curriculum__showcase">
+                    <div class="curriculum__card surface--soft">
+                        <div class="curriculum__visual hover-stack">
+                            <img src="images/science_inner_1.png.webp" alt="과학 내지 1" class="curriculum__img stack-img stack-img--back2" onerror="this.src='https://placehold.co/400x560/f8f9fa/adb5bd?text=Inner+Page+1'" />
+                            <img src="images/science_inner_2.png.webp" alt="과학 내지 2" class="curriculum__img stack-img stack-img--back1" onerror="this.src='https://placehold.co/400x560/e9ecef/6c757d?text=Inner+Page+2'" />
+                            <img src="images/science_cover.jpg" alt="과학 교과서 표지" class="curriculum__img stack-img stack-img--front" />
+                        </div>
+                        <div class="curriculum__info">
+                            <div class="curriculum__tag">Category: Science</div>
+                            <h3 class="curriculum__item-title">과학 - 창조의 질서</h3>
+                            <p class="curriculum__item-desc">세상의 모든 조화 속에 숨겨진 원리와 창조의 질서를 발견하며 지적 호기심을 일깨웁니다.</p>
+                        </div>
+                    </div>
 
-              <article class="panel">
-                <div class="panel__header">
-                  <p class="panel__eyebrow">review queue</p>
+                    <div class="curriculum__card surface--soft">
+                        <div class="curriculum__visual hover-stack">
+                            <img src="images/social_inner_1.png.webp" alt="사회 내지 1" class="curriculum__img stack-img stack-img--back2" onerror="this.src='https://placehold.co/400x560/f8f9fa/adb5bd?text=Inner+Page+1'" />
+                            <img src="images/social_inner_2.png.webp" alt="사회 내지 2" class="curriculum__img stack-img stack-img--back1" onerror="this.src='https://placehold.co/400x560/e9ecef/6c757d?text=Inner+Page+2'" />
+                            <img src="images/social_cover.jpg" alt="사회 교과서 표지" class="curriculum__img stack-img stack-img--front" />
+                        </div>
+                        <div class="curriculum__info">
+                            <div class="curriculum__tag">Category: Social Studies</div>
+                            <h3 class="curriculum__item-title">사회 - 공동체의 가치</h3>
+                            <p class="curriculum__item-desc">함께 살아가는 세상 속에서 그리스도인의 책임과 이웃을 향한 사랑의 가치를 구체적으로 배웁니다.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="memo-stack" data-review-queue-list></div>
-              </article>
+
+                <div class="curriculum__footer">
+                    <a href="curriculum.html" class="btn--outline-minimal">교재 미리보기 더 보기</a>
+                </div>
             </div>
-          </section>
+        </section>
 
-          <section class="subview" data-toefl-panel="WRONG">
-            <article class="panel">
-              <div class="panel__header">
-                <p class="panel__eyebrow">wrong answers</p>
-                <button class="text-button" type="button" data-open-capture="wrong">+ wrong</button>
-              </div>
-              <div class="table-shell" data-wrong-list></div>
-            </article>
-          </section>
+        <section class="institutions reveal bg-soft-cyan" id="home-institutions">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Institutions</span>
+                    <h2 class="section-title">초시대 가치 교과서를<br />사용하고 있는 기관들</h2>
+                    <p class="section-subtitle">
+                        실제 교육 현장에서 함께 사용하고 있는 기관과 가정의 사례를 통해<br />
+                        초시대 가치 교육의 신뢰와 확장성을 확인하실 수 있습니다.
+                    </p>
+                </div>
 
-          <section class="subview" data-toefl-panel="STATS">
-            <div class="stats-grid">
-              <article class="panel">
-                <p class="panel__eyebrow">daily accuracy</p>
-                <div class="big-stat" data-stat-accuracy>86%</div>
-                <p class="stat-note">오늘 풀었던 문제의 정답률</p>
-              </article>
-              <article class="panel">
-                <p class="panel__eyebrow">cumulative questions</p>
-                <div class="big-stat" data-stat-questions>0</div>
-                <p class="stat-note">누적 문제 수</p>
-              </article>
-              <article class="panel">
-                <p class="panel__eyebrow">vocabulary count</p>
-                <div class="big-stat" data-stat-vocab>0</div>
-                <p class="stat-note">저장된 단어 수</p>
-              </article>
-              <article class="panel">
-                <p class="panel__eyebrow">mastered vocabulary</p>
-                <div class="big-stat" data-stat-mastered>0</div>
-                <p class="stat-note">암기 완료 처리된 단어</p>
-              </article>
+                <div class="institutions__grid">
+                    <article class="institution-card surface--soft">
+                        <div class="institution-card__media">
+                            <img src="images/saga2.webp" alt="사랑 글로벌 아카데미 로고">
+                        </div>
+                        <h3 class="institution-card__title">사랑 글로벌 아카데미</h3>
+                        <p class="institution-card__desc">사랑 글로벌 아카데미는 사랑의교회에서 운영하는 교육기관입니다.</p>
+                    </article>
+
+                    <article class="institution-card surface--soft">
+                        <div class="institution-card__media">
+                            <img src="images/chs2.webp" alt="처치홈스쿨 사역원 로고">
+                        </div>
+                        <h3 class="institution-card__title">처치홈스쿨</h3>
+                        <p class="institution-card__desc">가정과 교회를 잇는 홈스쿨 사역 현장에서 실제 교육 자료로 사용되고 있습니다.</p>
+                    </article>
+
+                    <article class="institution-card surface--soft">
+                        <div class="institution-card__media">
+                            <img src="images/homeschooling-families.png" alt="홈스쿨링 가정들 이미지">
+                        </div>
+                        <h3 class="institution-card__title">홈스쿨링 가정들</h3>
+                        <p class="institution-card__desc">하나님 중심의 학습을 바라는 여러 가정에서 꾸준히 선택하고 있습니다.</p>
+                    </article>
+                </div>
             </div>
+        </section>
 
-            <article class="panel">
-              <div class="panel__header">
-                <p class="panel__eyebrow">wrong answer reason distribution</p>
-              </div>
-              <div class="bar-chart" data-reason-chart></div>
-            </article>
-          </section>
-        </div>
-      </section>
+        <section class="testimonials reveal bg-soft-orange home-reviews" id="home-reviews">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Learning Moments</span>
+                    <h2 class="section-title">함께 자라나는 순간들</h2>
+                    <p class="section-subtitle">
+                        실제 가정과 현장에서 초시대 가치 교육을 사용하며 쌓아간 장면과,<br />
+                        교재를 사용하는 분들이 들려주신 이야기를 함께 담았습니다.
+                    </p>
+                </div>
 
-      <section class="view" data-view="ARCHIVE" aria-labelledby="archive-title">
-        <article class="section-heading">
-          <p>ARCHIVE</p>
-          <h2 id="archive-title">editorial diary</h2>
-          <span>search vocabulary · wrong answers · memo · tasks</span>
-        </article>
+                <div class="gallery-carousel" data-gallery-carousel>
+                    <div class="gallery-carousel__controls" aria-label="사진 갤러리 이동">
+                        <button type="button" class="gallery-carousel__button" data-gallery-prev aria-label="이전 사진">
+                            <span aria-hidden="true">‹</span>
+                        </button>
+                        <button type="button" class="gallery-carousel__button" data-gallery-next aria-label="다음 사진">
+                            <span aria-hidden="true">›</span>
+                        </button>
+                    </div>
+                    <div class="gallery-carousel__viewport">
+                        <div class="gallery-carousel__track" data-gallery-track>
+                            <article class="gallery-card">
+                                <div class="gallery-card__media">
+                                    <img src="images/후기사진/1.png" alt="교재를 사용하는 아이의 모습 1">
+                                </div>
+                            </article>
+                            <article class="gallery-card">
+                                <div class="gallery-card__media">
+                                    <img src="images/후기사진/2.png" alt="교재를 사용하는 아이의 모습 2">
+                                </div>
+                            </article>
+                            <article class="gallery-card">
+                                <div class="gallery-card__media">
+                                    <img src="images/후기사진/3.png" alt="교재를 사용하는 아이의 모습 3">
+                                </div>
+                            </article>
+                            <article class="gallery-card">
+                                <div class="gallery-card__media">
+                                    <img src="images/후기사진/4.png" alt="교재를 사용하는 아이의 모습 4">
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="archive-toolbar">
-          <label class="search-field">
-            <span>SEARCH</span>
-            <input type="search" placeholder="vocabulary / wrong answers / memo / tasks" data-archive-search />
-          </label>
-          <div class="archive-tabs" role="tablist" aria-label="Archive date filter" data-archive-tabs></div>
-        </div>
+                <div class="section-header home-reviews__stories-header">
+                    <span class="section-label">Trust</span>
+                    <h3 class="section-title">교재를 사용하는 사람들의 이야기</h3>
+                    <p class="section-subtitle">
+                        실제 후기에서 자주 언급된 감동과 안심의 순간을 짧게 모았습니다.
+                    </p>
+                </div>
 
-        <div class="archive-list" data-archive-list></div>
-      </section>
+                <div class="testimonials__grid">
+                    <article class="testimonial-card surface--flat accent-top-blue">
+                        <div class="testimonial-stars" style="color: var(--brand-orange); font-size: 1.2rem; letter-spacing: 2px;">★★★★★</div>
+                        <p class="testimonial-text">
+                            홈스쿨링을 하며 교재를 찾던 중, 성경적 가치가 담긴 교재라는 점이 가장 마음에 들었습니다.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="btn-dot" style="background:var(--dot-blue)"></div>
+                            <span>류*아 학부모 (네이버 스마트스토어)</span>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card surface--flat accent-top-green">
+                        <div class="testimonial-stars" style="color: var(--brand-orange); font-size: 1.2rem; letter-spacing: 2px;">★★★★★</div>
+                        <p class="testimonial-text">
+                            아이와 함께 하기 아주 잘 만들어진 교재라서, 다음 학기 교재도 계속 기다리고 있습니다.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="btn-dot" style="background:var(--dot-green)"></div>
+                            <span>cosd**** 학부모 (네이버 스마트스토어)</span>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card surface--flat accent-top-blue">
+                        <div class="testimonial-stars" style="color: var(--brand-orange); font-size: 1.2rem; letter-spacing: 2px;">★★★★★</div>
+                        <p class="testimonial-text">
+                            하나님 중심의 내용이 아이와 저 모두에게 감동과 유익을 주는 교재입니다.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="btn-dot" style="background:var(--dot-blue)"></div>
+                            <span>정*희님</span>
+                        </div>
+                    </article>
+
+                    <article class="testimonial-card surface--flat accent-top-green">
+                        <div class="testimonial-stars" style="color: var(--brand-orange); font-size: 1.2rem; letter-spacing: 2px;">★★★★★</div>
+                        <p class="testimonial-text">
+                            아이와 함께 읽으며 자연스럽게 대화를 이어갈 수 있어서 만족스러웠습니다.
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="btn-dot" style="background:var(--dot-green)"></div>
+                            <span>장*이님</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="home-reviews__footer">
+                    <a href="reviews.html" class="btn--outline-minimal">후기 더 보기</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact reveal" id="home-cta">
+            <div class="contact__container">
+                <div class="section-header">
+                    <span class="section-label">Contact Us</span>
+                    <h2 class="section-title">시대를 넘는 가치 교육,<br />함께 시작해보세요.</h2>
+                    <p class="section-subtitle">
+                        초시대 가치 교육과정 도입, 교재 구매 문의 등<br />
+                        궁금하신 점을 남겨주시면 정성껏 답변해 드리겠습니다.
+                    </p>
+                </div>
+
+                <div class="contact__info">
+                    <div class="contact__item">
+                        <span class="contact__item-label">이메일 문의</span>
+                        <a href="mailto:haiyoung.jung@gmail.com" class="contact__item-link">haiyoung.jung@gmail.com</a>
+                    </div>
+                    <div class="contact__item">
+                        <span class="contact__item-label">전화 문의</span>
+                        <a href="tel:010-2650-5724" class="contact__item-link">010-2650-5724</a>
+                    </div>
+                </div>
+
+                <div class="sponsorship-note" aria-label="후원 안내">
+                    <div class="sponsorship-note__eyebrow">Support</div>
+                    <div class="sponsorship-note__content">
+                        <span class="sponsorship-note__line sponsorship-note__line--lead"><strong>한승환 장로님의 기도와 후원으로</strong></span>
+                        <span class="sponsorship-note__line sponsorship-note__line--body">이 프로젝트가 진행되고 있습니다.</span>
+                    </div>
+                    <div class="sponsorship-note__meta">초시대 가치 교육의 첫걸음을 함께 지지해 주신 귀한 동행에 깊이 감사드립니다.</div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <button class="capture-fab" type="button" data-open-capture="task" aria-label="Quick capture">
-      <span>+</span>
-      <small>QUICK CAPTURE</small>
-    </button>
-
-    <nav class="bottom-nav" aria-label="App navigation">
-      <button class="bottom-nav__item is-active" data-view-tab="TODAY">TODAY</button>
-      <button class="bottom-nav__item" data-view-tab="PLAN">PLAN</button>
-      <button class="bottom-nav__item" data-view-tab="TOEFL">TOEFL</button>
-      <button class="bottom-nav__item" data-view-tab="ARCHIVE">ARCHIVE</button>
-    </nav>
-  </div>
-
-  <dialog class="editor-dialog" id="editor-dialog" aria-label="Quick capture editor">
-    <form class="editor" id="editor-form" method="dialog">
-      <div class="editor__header">
-        <div>
-          <p class="panel__eyebrow">quick capture</p>
-          <h2 data-editor-title>Add item</h2>
-        </div>
-        <button class="text-button" type="button" data-editor-close aria-label="Close dialog">Close</button>
-      </div>
-
-      <div class="editor__tabs" role="tablist" aria-label="Capture type">
-        <button class="subtab is-active" type="button" data-editor-type="task">Task</button>
-        <button class="subtab" type="button" data-editor-type="schedule">Schedule</button>
-        <button class="subtab" type="button" data-editor-type="word">Vocabulary</button>
-        <button class="subtab" type="button" data-editor-type="wrong">Wrong Answer</button>
-        <button class="subtab" type="button" data-editor-type="memo">Memo</button>
-      </div>
-
-      <div class="editor__body" data-editor-fields></div>
-
-      <div class="editor__footer">
-        <button class="button button--ghost" type="button" data-editor-close>Cancel</button>
-        <button class="button button--primary" type="submit">Save</button>
-      </div>
-    </form>
-  </dialog>
-
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-  <script src="js/personal-os.js" type="module"></script>
+    <script src="js/animation.js"></script>
 </body>
+
 </html>
