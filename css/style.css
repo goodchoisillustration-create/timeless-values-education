@@ -1760,10 +1760,10 @@ a {
 
 .our-hearts__grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
     margin: 4rem auto 0;
-    max-width: 1360px;
+    max-width: 1160px;
 }
 
 .our-hearts__card {
@@ -1969,6 +1969,12 @@ a {
     margin-right: 0.25rem;
 }
 
+.maker-card--featured {
+    grid-column: 1 / -1;
+    max-width: 560px;
+    justify-self: center;
+}
+
 
 /* ==========================================================================
    Roadmap Section
@@ -2046,6 +2052,12 @@ a {
     .roadmap__grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .maker-card--featured {
+        grid-column: auto;
+        max-width: none;
+        justify-self: stretch;
     }
 }
 
