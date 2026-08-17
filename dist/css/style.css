@@ -1170,14 +1170,6 @@ a {
         padding-bottom: 8rem;
     }
 
-    .philosophy-page .page-section:first-of-type {
-        padding-top: 10rem;
-    }
-
-    .philosophy-page .page-section:first-of-type .page-section__inner {
-        padding-top: 2rem;
-    }
-
     .philosophy-hero__content,
     .philosophy-hero__simple {
         text-align: center;
@@ -2574,17 +2566,8 @@ a {
     padding-bottom: 12.5rem;
 }
 
-.philosophy-page .page-section:first-of-type {
-    padding-top: 140px;
-}
-
-.philosophy-page .page-section:first-of-type .section-header {
-    margin-top: 0;
-    margin-bottom: 4rem;
-}
-
-.philosophy-page .page-section:first-of-type .page-section__inner {
-    padding-top: 4rem;
+.philosophy-page .philosophy-hero + .page-section {
+    padding-top: 7.25rem;
 }
 
 .philosophy-hero__layout {
@@ -2887,14 +2870,6 @@ a {
     margin-bottom: 1.2rem;
 }
 
-.philosophy-page .page-section:first-of-type {
-    padding-top: 5rem;
-}
-
-.philosophy-page .page-section:first-of-type .section-header {
-    margin-bottom: 4rem;
-}
-
 .gallery-carousel {
     margin-top: 2.25rem;
     position: relative;
@@ -3124,17 +3099,8 @@ a {
         padding: 0 1.5rem 6rem;
     }
 
-    .philosophy-page .page-section:first-of-type {
-        padding-top: 110px;
-    }
-
-    .philosophy-page .page-section:first-of-type .section-header {
-        margin-top: 0;
-        margin-bottom: 3rem;
-    }
-
-    .philosophy-page .page-section:first-of-type .page-section__inner {
-        padding-top: 2.5rem;
+    .philosophy-page .philosophy-hero + .page-section {
+        padding-top: 4.5rem;
     }
 
     .page-section--gallery-first {
