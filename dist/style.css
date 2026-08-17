@@ -1684,6 +1684,7 @@ a {
     gap: 1rem;
 }
 
+/* Keep the homeschooling families card aligned with the other institution cards. */
 .institution-card__media--families {
     min-height: 9rem;
     padding-top: 0.5rem;
