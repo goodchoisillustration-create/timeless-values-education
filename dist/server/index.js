@@ -1,5 +1,6 @@
 export default {
   async fetch(request, env) {
+    // Keep the asset root routed through /index.html for static pages.
     const url = new URL(request.url);
 
     if (url.pathname === "/") {
