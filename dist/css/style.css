@@ -1646,30 +1646,55 @@ a {
 }
 
 .institution-card {
-    padding: 2rem 1.75rem;
+    padding: 2.1rem 1.8rem 2rem;
     border-radius: 1.5rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    min-height: 15rem;
+    min-height: 18rem;
 }
 
 .institution-card__media {
     width: 100%;
-    min-height: 7.5rem;
+    min-height: 9rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0.5rem 0.25rem 0.25rem;
+    padding: 0.5rem 0.25rem 0.35rem;
 }
 
 .institution-card__media img {
     display: block;
-    max-width: min(100%, 15rem);
-    max-height: 6.8rem;
+    max-width: min(100%, 18rem);
+    max-height: 8rem;
     object-fit: contain;
+}
+
+.institution-card__icon {
+    display: block;
+    flex: 0 0 auto;
+    width: 7rem;
+    height: auto;
+    object-fit: contain;
+}
+
+.institution-card--families {
+    gap: 1rem;
+}
+
+/* Keep the homeschooling families card aligned with the other institution cards. */
+.institution-card__media--families {
+    min-height: 9rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.35rem;
+}
+
+.institution-card__icon--families {
+    width: 6.2rem;
+    max-height: 6.2rem;
+    margin-top: 0;
 }
 
 .institution-card__mark {
@@ -1704,7 +1729,7 @@ a {
 }
 
 .institution-card__title {
-    font-size: 1.45rem;
+    font-size: 1.5rem;
     line-height: 1.2;
     letter-spacing: -0.03em;
     color: var(--text-primary);
@@ -1743,10 +1768,10 @@ a {
 
 .our-hearts__grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
     margin: 4rem auto 0;
-    max-width: 1360px;
+    max-width: 1160px;
 }
 
 .our-hearts__card {
@@ -1952,6 +1977,12 @@ a {
     margin-right: 0.25rem;
 }
 
+.maker-card--featured {
+    grid-column: 1 / -1;
+    max-width: 560px;
+    justify-self: center;
+}
+
 
 /* ==========================================================================
    Roadmap Section
@@ -2029,6 +2060,12 @@ a {
     .roadmap__grid {
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+
+    .maker-card--featured {
+        grid-column: auto;
+        max-width: none;
+        justify-self: stretch;
     }
 }
 
@@ -2538,11 +2575,12 @@ a {
 }
 
 .philosophy-page .page-section:first-of-type {
-    padding-top: 16rem;
+    padding-top: 140px;
 }
 
 .philosophy-page .page-section:first-of-type .section-header {
     margin-top: 0;
+    margin-bottom: 4rem;
 }
 
 .philosophy-page .page-section:first-of-type .page-section__inner {
@@ -2850,7 +2888,7 @@ a {
 }
 
 .philosophy-page .page-section:first-of-type {
-    padding-top: 140px;
+    padding-top: 5rem;
 }
 
 .philosophy-page .page-section:first-of-type .section-header {
@@ -3163,17 +3201,32 @@ a {
     }
 
     .institution-card {
-        padding: 1.5rem 1.2rem;
+        padding: 1.5rem 1.2rem 1.35rem;
         min-height: auto;
     }
 
     .institution-card__media {
-        min-height: 6rem;
+        min-height: 6.8rem;
     }
 
     .institution-card__media img {
-        max-width: min(100%, 11rem);
-        max-height: 5rem;
+        max-width: min(100%, 12.5rem);
+        max-height: 6.2rem;
+    }
+
+    .institution-card__icon {
+        width: 6.25rem;
+    }
+
+    .institution-card__media--families {
+        min-height: 6.8rem;
+        padding-top: 0.25rem;
+        padding-bottom: 0.1rem;
+    }
+
+    .institution-card__icon--families {
+        width: 5.5rem;
+        max-height: 5.5rem;
     }
 
     .institution-card__mark {
@@ -3183,7 +3236,7 @@ a {
     }
 
     .institution-card__title {
-        font-size: 1.2rem;
+        font-size: 1.15rem;
     }
 
     .institution-card__desc {

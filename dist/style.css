@@ -1782,6 +1782,8 @@ a {
     justify-content: flex-start;
     gap: 1.25rem;
     min-height: 100%;
+    --maker-accent: var(--dot-cyan);
+    --maker-accent-soft: rgba(0, 137, 135, 0.08);
 }
 
 .maker-card__top {
@@ -1897,13 +1899,17 @@ a {
 }
 
 .maker-card__eyebrow {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.32rem 0.7rem;
+    border-radius: 999px;
     font-size: 0.74rem;
     font-weight: 800;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--text-light);
-    margin-bottom: 0.35rem;
+    color: var(--maker-accent);
+    background: var(--maker-accent-soft);
+    margin-bottom: 0.55rem;
 }
 
 .maker-card__name {
@@ -1949,7 +1955,7 @@ a {
     width: 0.38rem;
     height: 0.38rem;
     border-radius: 50%;
-    background: var(--brand-cyan);
+    background: var(--maker-accent);
 }
 
 .maker-card__quote {
@@ -1957,7 +1963,8 @@ a {
     padding: 1rem 1.1rem;
     border-radius: 1rem;
     background: rgba(255, 255, 255, 0.72);
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--maker-accent-soft);
+    border-left: 4px solid var(--maker-accent);
     font-size: 0.98rem;
     line-height: 1.7;
     color: var(--text-primary);
@@ -1965,7 +1972,7 @@ a {
 
 .maker-card__quote::before {
     content: '“';
-    color: var(--brand-cyan);
+    color: var(--maker-accent);
     font-weight: 800;
     margin-right: 0.25rem;
 }
@@ -2568,11 +2575,12 @@ a {
 }
 
 .philosophy-page .page-section:first-of-type {
-    padding-top: 16rem;
+    padding-top: 140px;
 }
 
 .philosophy-page .page-section:first-of-type .section-header {
     margin-top: 0;
+    margin-bottom: 4rem;
 }
 
 .philosophy-page .page-section:first-of-type .page-section__inner {
@@ -2879,6 +2887,14 @@ a {
     margin-bottom: 1.2rem;
 }
 
+.philosophy-page .page-section:first-of-type {
+    padding-top: 5rem;
+}
+
+.philosophy-page .page-section:first-of-type .section-header {
+    margin-bottom: 4rem;
+}
+
 .gallery-carousel {
     margin-top: 2.25rem;
     position: relative;
@@ -3109,11 +3125,12 @@ a {
     }
 
     .philosophy-page .page-section:first-of-type {
-        padding-top: 12rem;
+        padding-top: 110px;
     }
 
     .philosophy-page .page-section:first-of-type .section-header {
         margin-top: 0;
+        margin-bottom: 3rem;
     }
 
     .philosophy-page .page-section:first-of-type .page-section__inner {
