@@ -2850,7 +2850,7 @@ a {
 }
 
 .philosophy-page .page-section:first-of-type {
-    padding-top: 5rem;
+    padding-top: calc(5rem + 3cm);
 }
 
 .philosophy-page .page-section:first-of-type .section-header {
@@ -3087,7 +3087,7 @@ a {
     }
 
     .philosophy-page .page-section:first-of-type {
-        padding-top: 8rem;
+        padding-top: calc(8rem + 3cm);
     }
 
     .philosophy-page .page-section:first-of-type .section-header {
