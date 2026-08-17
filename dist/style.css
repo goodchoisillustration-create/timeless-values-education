@@ -1685,14 +1685,14 @@ a {
 }
 
 .institution-card__media--families {
-    min-height: 11rem;
-    padding-top: 0.35rem;
-    padding-bottom: 0.15rem;
+    min-height: 9rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.35rem;
 }
 
 .institution-card__icon--families {
-    width: 9.2rem;
-    max-height: 9.2rem;
+    width: 6.2rem;
+    max-height: 6.2rem;
     margin-top: 0;
 }
 
@@ -3201,14 +3201,14 @@ a {
     }
 
     .institution-card__media--families {
-        min-height: 7.8rem;
+        min-height: 6.8rem;
         padding-top: 0.25rem;
         padding-bottom: 0.1rem;
     }
 
     .institution-card__icon--families {
-        width: 7.3rem;
-        max-height: 7.3rem;
+        width: 5.5rem;
+        max-height: 5.5rem;
     }
 
     .institution-card__mark {
