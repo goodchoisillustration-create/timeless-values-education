@@ -2574,11 +2574,12 @@ a {
 }
 
 .philosophy-page .page-section:first-of-type {
-    padding-top: 16rem;
+    padding-top: 5rem;
 }
 
 .philosophy-page .page-section:first-of-type .section-header {
     margin-top: 0;
+    margin-bottom: 4rem;
 }
 
 .philosophy-page .page-section:first-of-type .page-section__inner {

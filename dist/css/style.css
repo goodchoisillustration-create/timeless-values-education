@@ -2849,6 +2849,14 @@ a {
     margin-bottom: 1.2rem;
 }
 
+.philosophy-page .page-section:first-of-type {
+    padding-top: 5rem;
+}
+
+.philosophy-page .page-section:first-of-type .section-header {
+    margin-bottom: 4rem;
+}
+
 .gallery-carousel {
     margin-top: 2.25rem;
     position: relative;
@@ -3079,11 +3087,12 @@ a {
     }
 
     .philosophy-page .page-section:first-of-type {
-        padding-top: 12rem;
+        padding-top: 8rem;
     }
 
     .philosophy-page .page-section:first-of-type .section-header {
         margin-top: 0;
+        margin-bottom: 3rem;
     }
 
     .philosophy-page .page-section:first-of-type .page-section__inner {
