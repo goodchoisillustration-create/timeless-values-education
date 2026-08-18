@@ -643,9 +643,9 @@ a {
 }
 
 .hero__description {
-    max-width: 36rem;
-    margin: 0 auto var(--space-xl) auto;
-    padding: var(--space-md) var(--space-lg);
+    max-width: 40rem;
+    margin: 0 0 var(--space-xl) 0;
+    padding: 1.35rem 1.75rem;
     font-size: clamp(1.1rem, 1.8vw, 1.25rem);
     color: var(--text-secondary);
     line-height: var(--line-height-relaxed);
@@ -973,6 +973,9 @@ a {
         margin-bottom: 1.6rem;
         padding: 1.2rem 1.1rem;
         font-size: 0.98rem;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .hero__image-wrapper {
