@@ -643,7 +643,7 @@ a {
 }
 
 .hero__description {
-    max-width: 720px;
+    max-width: 36rem;
     margin: 0 auto var(--space-xl) auto;
     padding: var(--space-md) var(--space-lg);
     font-size: clamp(1.1rem, 1.8vw, 1.25rem);
@@ -679,8 +679,9 @@ a {
     align-items: center;
     gap: 1rem;
     width: auto;
-    max-width: 360px;
+    max-width: none;
     margin-top: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -747,7 +748,7 @@ a {
 }
 
 .hero__buttons .btn--glass-cyan {
-    min-width: 300px;
+    min-width: 240px;
     width: auto;
     padding: 1rem 1.8rem;
     border-radius: 999px;
@@ -758,6 +759,20 @@ a {
         0 0 0 1px rgba(255, 255, 255, 0.8) inset !important;
     color: var(--brand-cyan) !important;
     letter-spacing: -0.02em;
+}
+
+.hero__buttons .btn--outline-minimal {
+    min-width: 220px;
+    width: auto;
+    padding: 1rem 1.8rem;
+    border-radius: 999px;
+    border-color: rgba(23, 20, 18, 0.16);
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.hero__buttons .btn--outline-minimal:hover {
+    border-color: rgba(23, 20, 18, 0.32);
+    background: rgba(255, 255, 255, 0.92);
 }
 
 .hero__buttons .btn--glass-cyan:hover {
@@ -955,7 +970,7 @@ a {
     }
 
     .hero__description {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.6rem;
         padding: 1.2rem 1.1rem;
         font-size: 0.98rem;
     }
@@ -970,13 +985,15 @@ a {
     }
 
     .hero__buttons {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: stretch;
         width: 100%;
         max-width: none;
         margin-top: 0.35rem;
     }
 
-    .hero__buttons .btn--glass-cyan {
+    .hero__buttons .btn--glass-cyan,
+    .hero__buttons .btn--outline-minimal {
         width: 100%;
         min-width: 0;
         padding: 1rem 1.2rem;
