@@ -946,8 +946,9 @@ a {
 }
 
 .approach__header {
-    max-width: 100%;
-    margin-bottom: 3.35rem;
+    max-width: 72rem;
+    margin-bottom: 1.95rem;
+    text-align: center;
 }
 
 .approach__header .section-title {
@@ -956,30 +957,32 @@ a {
 
 .approach__header .section-label {
     color: var(--brand-blue);
-    margin-bottom: 1rem;
+    margin-bottom: 0.55rem;
 }
 
 .approach__lead {
-    max-width: 39rem;
-    font-size: clamp(1.12rem, 1.55vw, 1.28rem);
-    line-height: 1.78;
-    margin-bottom: 0;
-    color: #5f5a55;
+    max-width: 45rem;
+    margin: 0.15rem auto 0;
+    font-size: clamp(1.08rem, 1.35vw, 1.22rem);
+    line-height: 1.72;
+    color: #514c47;
 }
 
-.approach__title {
+.approach__manifesto-title {
     display: block;
     max-width: 100%;
-    font-size: clamp(3rem, 5.5vw, 4.85rem);
-    line-height: 0.94;
-    letter-spacing: -0.065em;
-    margin-bottom: 0.95rem;
+    margin: 0 auto 0.55rem;
+    font-size: clamp(2.65rem, 4.1vw, 4.1rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    font-weight: 800;
     word-break: keep-all;
+    white-space: nowrap;
 }
 
 .approach__title-line {
-    display: block;
-    white-space: normal;
+    display: inline;
+    white-space: inherit;
 }
 
 .approach__title-line--dark {
@@ -988,14 +991,15 @@ a {
 
 .approach__title-line--accent {
     color: var(--brand-blue);
+    margin-left: 0.12em;
 }
 
 .approach__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 3.2rem;
+    gap: 3rem;
     align-items: start;
-    padding-top: 1.95rem;
+    padding-top: 1.9rem;
     border-top: 1px solid rgba(34, 117, 184, 0.12);
 }
 
@@ -1014,7 +1018,7 @@ a {
     color: var(--brand-blue);
 }
 
-.approach__title {
+.approach__item .approach__title {
     font-size: clamp(1.46rem, 2vw, 1.88rem);
     line-height: 1.12;
     letter-spacing: -0.05em;
@@ -1032,34 +1036,36 @@ a {
 
 @media (max-width: 992px) {
     .approach {
-        padding: 5.8rem 0 6.55rem;
+        padding: 5.45rem 0 6.2rem;
     }
 
     .approach__header {
-        margin-bottom: 2.8rem;
+        max-width: 100%;
+        margin-bottom: 2.1rem;
     }
 
-    .approach__title {
-        font-size: clamp(2.5rem, 5vw, 3.5rem);
+    .approach__manifesto-title {
+        font-size: clamp(2.35rem, 4.8vw, 3.3rem);
+        white-space: normal;
     }
 
     .approach__lead {
-        max-width: 36rem;
-        font-size: 1.06rem;
+        max-width: 40rem;
+        font-size: 1.04rem;
     }
 
     .approach__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 2.25rem 2rem;
-        padding-top: 1.7rem;
+        gap: 2.2rem 2rem;
+        padding-top: 1.65rem;
     }
 
     .approach__item:last-child {
         grid-column: 1 / -1;
-        max-width: 36rem;
+        max-width: 38rem;
     }
 
-    .approach__title {
+    .approach__item .approach__title {
         font-size: 1.42rem;
     }
 
@@ -1071,11 +1077,11 @@ a {
 
 @media (max-width: 768px) {
     .approach {
-        padding: 4.95rem 1rem 6rem;
+        padding: 4.85rem 1rem 5.8rem;
     }
 
     .approach__header {
-        margin-bottom: 2.15rem;
+        margin-bottom: 1.8rem;
     }
 
     .approach__header .section-title {
@@ -1083,24 +1089,25 @@ a {
     }
 
     .approach__header .section-label {
-        margin-bottom: 0.85rem;
+        margin-bottom: 0.5rem;
     }
 
-    .approach__title {
-        font-size: clamp(2.05rem, 8.4vw, 2.65rem);
-        line-height: 0.97;
-        margin-bottom: 1rem;
+    .approach__manifesto-title {
+        font-size: clamp(2.1rem, 8.2vw, 2.7rem);
+        line-height: 1.03;
+        margin-bottom: 0.75rem;
+        white-space: normal;
     }
 
     .approach__lead {
-        max-width: 32rem;
-        font-size: 1rem;
-        line-height: 1.72;
+        max-width: 30rem;
+        font-size: 0.98rem;
+        line-height: 1.76;
     }
 
     .approach__grid {
         grid-template-columns: 1fr;
-        gap: 1.85rem;
+        gap: 1.75rem;
         padding-top: 1.45rem;
     }
 
@@ -1112,7 +1119,7 @@ a {
         font-size: 0.84rem;
     }
 
-    .approach__title {
+    .approach__item .approach__title {
         display: block;
         font-size: 1.2rem;
         line-height: 1.14;
