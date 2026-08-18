@@ -942,102 +942,116 @@ a {
    Our Approach Section
    ========================================================================== */
 .approach {
-    padding: calc(var(--space-xxl) * 0.92) 0 calc(var(--space-xxl) * 0.96);
+    padding: calc(var(--space-xxl) * 0.72) 0 calc(var(--space-xxl) * 0.84);
 }
 
 .approach__header {
     max-width: 100%;
-    margin-bottom: 4.4rem;
+    margin-bottom: 3.35rem;
 }
 
 .approach__header .section-title {
     max-width: 100%;
 }
 
+.approach__header .section-label {
+    color: var(--brand-blue);
+    margin-bottom: 1rem;
+}
+
 .approach__lead {
-    max-width: 40rem;
-    font-size: 1.06rem;
-    line-height: 1.85;
+    max-width: 39rem;
+    font-size: clamp(1.12rem, 1.55vw, 1.28rem);
+    line-height: 1.78;
     margin-bottom: 0;
+    color: #5f5a55;
 }
 
 .approach__title {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    column-gap: 0.3em;
-    row-gap: 0;
+    display: block;
     max-width: 100%;
-    font-size: clamp(2.25rem, 3.75vw, 4rem);
-    line-height: 0.98;
-    letter-spacing: -0.05em;
+    font-size: clamp(3rem, 5.5vw, 4.85rem);
+    line-height: 0.94;
+    letter-spacing: -0.065em;
+    margin-bottom: 0.95rem;
+    word-break: keep-all;
 }
 
 .approach__title-line {
-    display: inline-block;
-    white-space: nowrap;
+    display: block;
+    white-space: normal;
+}
+
+.approach__title-line--dark {
+    color: var(--text-primary);
+}
+
+.approach__title-line--accent {
+    color: var(--brand-blue);
 }
 
 .approach__grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2.75rem;
+    gap: 3.2rem;
     align-items: start;
-    padding-top: 1.8rem;
-    border-top: 1px solid rgba(23, 20, 18, 0.08);
+    padding-top: 1.95rem;
+    border-top: 1px solid rgba(34, 117, 184, 0.12);
 }
 
 .approach__item {
     display: flex;
     flex-direction: column;
-    gap: 0.9rem;
+    gap: 0.78rem;
     padding-top: 0;
     border-top: 0;
 }
 
 .approach__index {
-    font-size: 0.84rem;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    color: var(--dot-green);
-}
-
-.approach__eyebrow {
-    font-size: 0.74rem;
+    font-size: 0.92rem;
     font-weight: 800;
-    letter-spacing: 0.18em;
-    color: var(--dot-cyan);
-    text-transform: uppercase;
+    letter-spacing: 0.24em;
+    color: var(--brand-blue);
 }
 
 .approach__title {
-    font-size: clamp(1.3rem, 1.6vw, 1.5rem);
-    line-height: 1.25;
-    letter-spacing: -0.04em;
+    font-size: clamp(1.46rem, 2vw, 1.88rem);
+    line-height: 1.12;
+    letter-spacing: -0.05em;
+    font-weight: 700;
     color: var(--text-primary);
 }
 
 .approach__desc {
-    max-width: 23rem;
-    font-size: 1rem;
-    line-height: 1.88;
-    color: var(--text-secondary);
+    max-width: 24rem;
+    font-size: 1.02rem;
+    line-height: 1.92;
+    color: #645f59;
     word-break: keep-all;
 }
 
 @media (max-width: 992px) {
     .approach {
-        padding: 6.25rem 0 7rem;
+        padding: 5.8rem 0 6.55rem;
     }
 
     .approach__header {
-        margin-bottom: 2.95rem;
+        margin-bottom: 2.8rem;
+    }
+
+    .approach__title {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+    }
+
+    .approach__lead {
+        max-width: 36rem;
+        font-size: 1.06rem;
     }
 
     .approach__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 2.25rem 1.9rem;
-        padding-top: 1.6rem;
+        gap: 2.25rem 2rem;
+        padding-top: 1.7rem;
     }
 
     .approach__item:last-child {
@@ -1046,60 +1060,68 @@ a {
     }
 
     .approach__title {
-        font-size: 1.3rem;
+        font-size: 1.42rem;
     }
 
     .approach__desc {
         max-width: none;
-        font-size: 0.98rem;
+        font-size: 0.99rem;
     }
 }
 
 @media (max-width: 768px) {
     .approach {
-        padding: 5.75rem 1rem 6.5rem;
+        padding: 4.95rem 1rem 6rem;
     }
 
     .approach__header {
-        margin-bottom: 2.35rem;
+        margin-bottom: 2.15rem;
     }
 
     .approach__header .section-title {
         max-width: 100%;
     }
 
+    .approach__header .section-label {
+        margin-bottom: 0.85rem;
+    }
+
+    .approach__title {
+        font-size: clamp(2.05rem, 8.4vw, 2.65rem);
+        line-height: 0.97;
+        margin-bottom: 1rem;
+    }
+
+    .approach__lead {
+        max-width: 32rem;
+        font-size: 1rem;
+        line-height: 1.72;
+    }
+
     .approach__grid {
         grid-template-columns: 1fr;
-        gap: 1.9rem;
+        gap: 1.85rem;
         padding-top: 1.45rem;
     }
 
     .approach__item {
-        gap: 0.85rem;
+        gap: 0.72rem;
     }
 
     .approach__index {
-        font-size: 0.82rem;
-    }
-
-    .approach__eyebrow {
-        font-size: 0.72rem;
+        font-size: 0.84rem;
     }
 
     .approach__title {
         display: block;
-        font-size: 1.18rem;
+        font-size: 1.2rem;
+        line-height: 1.14;
     }
 
     .approach__desc {
         max-width: none;
         font-size: 0.96rem;
-        line-height: 1.75;
-    }
-
-    .approach__title-line {
-        display: block;
-        white-space: normal;
+        line-height: 1.78;
     }
 
     .approach__item:last-child {
