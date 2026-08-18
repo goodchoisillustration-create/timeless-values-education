@@ -643,12 +643,13 @@ a {
 }
 
 .hero__description {
-    max-width: 720px;
-    margin: 0 auto var(--space-xl) auto;
-    padding: var(--space-md) var(--space-lg);
+    max-width: 40rem;
+    margin: 0 0 var(--space-xl) 0;
+    padding: 1.35rem 2rem;
     font-size: clamp(1.1rem, 1.8vw, 1.25rem);
     color: var(--text-secondary);
     line-height: var(--line-height-relaxed);
+    text-align: left;
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -679,8 +680,9 @@ a {
     align-items: center;
     gap: 1rem;
     width: auto;
-    max-width: 360px;
+    max-width: none;
     margin-top: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -747,7 +749,7 @@ a {
 }
 
 .hero__buttons .btn--glass-cyan {
-    min-width: 300px;
+    min-width: 240px;
     width: auto;
     padding: 1rem 1.8rem;
     border-radius: 999px;
@@ -758,6 +760,20 @@ a {
         0 0 0 1px rgba(255, 255, 255, 0.8) inset !important;
     color: var(--brand-cyan) !important;
     letter-spacing: -0.02em;
+}
+
+.hero__buttons .btn--outline-minimal {
+    min-width: 220px;
+    width: auto;
+    padding: 1rem 1.8rem;
+    border-radius: 999px;
+    border-color: rgba(23, 20, 18, 0.16);
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.hero__buttons .btn--outline-minimal:hover {
+    border-color: rgba(23, 20, 18, 0.32);
+    background: rgba(255, 255, 255, 0.92);
 }
 
 .hero__buttons .btn--glass-cyan:hover {
@@ -923,6 +939,195 @@ a {
 }
 
 /* ==========================================================================
+   Our Approach Section
+   ========================================================================== */
+.approach {
+    padding: 7.1rem 0 8.1rem;
+}
+
+.approach__header {
+    max-width: 72rem;
+    margin-bottom: 1.35rem;
+    text-align: center;
+}
+
+.approach__header .section-title {
+    max-width: 100%;
+}
+
+.approach__lead {
+    max-width: 38rem;
+    margin: 0 auto 0;
+    font-size: clamp(1.08rem, 1.55vw, 1.24rem);
+    line-height: 1.82;
+    color: #4e4742;
+}
+
+.approach__manifesto-title {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 1rem;
+    font-size: clamp(2.2rem, 3vw, 2.75rem);
+    line-height: 1.02;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+    word-break: keep-all;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.approach__title-line {
+    display: inline;
+    white-space: normal;
+}
+
+.approach__title-line--dark {
+    color: var(--text-primary);
+}
+
+.approach__title-line--accent {
+    color: var(--brand-blue);
+}
+
+.approach__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.8rem;
+    align-items: start;
+    padding-top: 1.55rem;
+    border-top: 1px solid rgba(34, 117, 184, 0.14);
+}
+
+.approach__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.approach__index {
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.22em;
+    color: var(--brand-blue);
+}
+
+.approach__item .approach__title {
+    font-size: clamp(1.68rem, 2.35vw, 2.1rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.approach__desc {
+    max-width: 22rem;
+    font-size: 1.08rem;
+    line-height: 1.86;
+    color: #57514d;
+    word-break: keep-all;
+}
+
+@media (max-width: 992px) {
+    .approach {
+        padding: 5.1rem 0 6rem;
+    }
+
+    .approach__header {
+        max-width: 100%;
+        margin-bottom: 1.4rem;
+    }
+
+    .approach__manifesto-title {
+        font-size: clamp(2.2rem, 4.9vw, 3rem);
+    }
+
+    .approach__lead {
+        max-width: 36rem;
+        font-size: 1rem;
+    }
+
+    .approach__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem 1.8rem;
+        padding-top: 1.45rem;
+    }
+
+    .approach__item:last-child {
+        grid-column: 1 / -1;
+        max-width: 36rem;
+    }
+
+    .approach__item .approach__title {
+        font-size: 1.58rem;
+    }
+
+    .approach__desc {
+        max-width: none;
+        font-size: 1.02rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .approach {
+        padding: 4.4rem 1rem 5.4rem;
+    }
+
+    .approach__header {
+        margin-bottom: 1.25rem;
+    }
+
+    .approach__header .section-title {
+        max-width: 100%;
+    }
+
+    .approach__manifesto-title {
+        font-size: clamp(2.05rem, 8.4vw, 2.55rem);
+        line-height: 1.06;
+        margin-bottom: 0.85rem;
+        white-space: normal;
+    }
+
+    .approach__lead {
+        max-width: 32rem;
+        font-size: 1rem;
+        line-height: 1.82;
+    }
+
+    .approach__grid {
+        grid-template-columns: 1fr;
+        gap: 1.55rem;
+        padding-top: 1.25rem;
+    }
+
+    .approach__item {
+        gap: 0.65rem;
+    }
+
+    .approach__index {
+        font-size: 0.9rem;
+    }
+
+    .approach__item .approach__title {
+        display: block;
+        font-size: 1.28rem;
+        line-height: 1.16;
+    }
+
+    .approach__desc {
+        max-width: none;
+        font-size: 1rem;
+        line-height: 1.78;
+    }
+
+    .approach__item:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+}
+
+/* ==========================================================================
    Media Queries (Responsive Default)
    ========================================================================== */
 @media (max-width: 768px) {
@@ -955,9 +1160,13 @@ a {
     }
 
     .hero__description {
-        margin-bottom: 1.5rem;
-        padding: 1.2rem 1.1rem;
+        margin-bottom: 1.6rem;
+        padding: 1.2rem 1.25rem;
         font-size: 0.98rem;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
     }
 
     .hero__image-wrapper {
@@ -970,13 +1179,15 @@ a {
     }
 
     .hero__buttons {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: stretch;
         width: 100%;
         max-width: none;
         margin-top: 0.35rem;
     }
 
-    .hero__buttons .btn--glass-cyan {
+    .hero__buttons .btn--glass-cyan,
+    .hero__buttons .btn--outline-minimal {
         width: 100%;
         min-width: 0;
         padding: 1rem 1.2rem;
@@ -1168,14 +1379,6 @@ a {
     .philosophy-hero {
         padding-top: 10.5rem;
         padding-bottom: 8rem;
-    }
-
-    .philosophy-page .page-section:first-of-type {
-        padding-top: 10rem;
-    }
-
-    .philosophy-page .page-section:first-of-type .page-section__inner {
-        padding-top: 2rem;
     }
 
     .philosophy-hero__content,
@@ -2574,17 +2777,8 @@ a {
     padding-bottom: 12.5rem;
 }
 
-.philosophy-page .page-section:first-of-type {
-    padding-top: 140px;
-}
-
-.philosophy-page .page-section:first-of-type .section-header {
-    margin-top: 0;
-    margin-bottom: 4rem;
-}
-
-.philosophy-page .page-section:first-of-type .page-section__inner {
-    padding-top: 4rem;
+.philosophy-page .philosophy-hero + .page-section {
+    padding-top: 7.25rem;
 }
 
 .philosophy-hero__layout {
@@ -2887,14 +3081,6 @@ a {
     margin-bottom: 1.2rem;
 }
 
-.philosophy-page .page-section:first-of-type {
-    padding-top: 5rem;
-}
-
-.philosophy-page .page-section:first-of-type .section-header {
-    margin-bottom: 4rem;
-}
-
 .gallery-carousel {
     margin-top: 2.25rem;
     position: relative;
@@ -3124,17 +3310,8 @@ a {
         padding: 0 1.5rem 6rem;
     }
 
-    .philosophy-page .page-section:first-of-type {
-        padding-top: 110px;
-    }
-
-    .philosophy-page .page-section:first-of-type .section-header {
-        margin-top: 0;
-        margin-bottom: 3rem;
-    }
-
-    .philosophy-page .page-section:first-of-type .page-section__inner {
-        padding-top: 2.5rem;
+    .philosophy-page .philosophy-hero + .page-section {
+        padding-top: 4.5rem;
     }
 
     .page-section--gallery-first {

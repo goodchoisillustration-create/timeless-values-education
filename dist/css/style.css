@@ -1030,11 +1030,11 @@ a {
 }
 
 @media (max-width: 992px) {
-.approach {
+    .approach {
         padding: 5.1rem 0 6rem;
     }
 
-.approach__header {
+    .approach__header {
         max-width: 100%;
         margin-bottom: 1.4rem;
     }
@@ -1043,38 +1043,38 @@ a {
         font-size: clamp(2.2rem, 4.9vw, 3rem);
     }
 
-.approach__lead {
+    .approach__lead {
         max-width: 36rem;
         font-size: 1rem;
     }
 
-.approach__grid {
+    .approach__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 2rem 1.8rem;
         padding-top: 1.45rem;
     }
 
-.approach__item:last-child {
+    .approach__item:last-child {
         grid-column: 1 / -1;
         max-width: 36rem;
     }
 
-.approach__item .approach__title {
+    .approach__item .approach__title {
         font-size: 1.58rem;
     }
 
-.approach__desc {
+    .approach__desc {
         max-width: none;
         font-size: 1.02rem;
     }
 }
 
 @media (max-width: 768px) {
-.approach {
+    .approach {
         padding: 4.4rem 1rem 5.4rem;
     }
 
-.approach__header {
+    .approach__header {
         margin-bottom: 1.25rem;
     }
 
@@ -1089,33 +1089,33 @@ a {
         white-space: normal;
     }
 
-.approach__lead {
+    .approach__lead {
         max-width: 32rem;
         font-size: 1rem;
         line-height: 1.82;
     }
 
-.approach__grid {
+    .approach__grid {
         grid-template-columns: 1fr;
         gap: 1.55rem;
         padding-top: 1.25rem;
     }
 
-.approach__item {
+    .approach__item {
         gap: 0.65rem;
     }
 
-.approach__index {
+    .approach__index {
         font-size: 0.9rem;
     }
 
-.approach__item .approach__title {
+    .approach__item .approach__title {
         display: block;
         font-size: 1.28rem;
         line-height: 1.16;
     }
 
-.approach__desc {
+    .approach__desc {
         max-width: none;
         font-size: 1rem;
         line-height: 1.78;
