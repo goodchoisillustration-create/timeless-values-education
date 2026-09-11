@@ -1483,31 +1483,53 @@ a {
    Programs Page - Curriculum Information Design
    ========================================================================== */
 .programs-page {
-    --program-deep: #2f5d46;
-    --program-deep-ink: #1f3d31;
-    --program-sage: #dfe8d6;
-    --program-sage-soft: rgba(223, 232, 214, 0.48);
-    --program-ivory: #fbf7ef;
-    --program-line: rgba(47, 93, 70, 0.14);
-    --program-shadow: 0 18px 50px rgba(47, 93, 70, 0.07);
-    background: linear-gradient(180deg, #fffdf8 0%, var(--bg-color) 50%, #fffdf8 100%);
+    --program-blue: #2680FF;
+    --program-teal: #1CBF8F;
+    --program-orange: #FF6B00;
+    --program-yellow: #FFCC00;
+    --program-green: #8FF50F;
+    --program-red: #FF1C26;
+    --program-ink: #404040;
+    --program-black: #000000;
+    --program-body: #5f5f5f;
+    --program-line: rgba(64, 64, 64, 0.12);
+    --program-blue-soft: rgba(38, 128, 255, 0.08);
+    --program-teal-soft: rgba(28, 191, 143, 0.1);
+    --program-yellow-soft: rgba(255, 204, 0, 0.16);
+    --program-orange-soft: rgba(255, 107, 0, 0.1);
+    --program-green-soft: rgba(143, 245, 15, 0.16);
+    --program-shadow: 0 18px 46px rgba(0, 0, 0, 0.045);
+    background: linear-gradient(180deg, #ffffff 0%, #faf9f8 52%, #ffffff 100%);
 }
 
 .programs-page .section-label {
-    color: var(--program-deep);
+    color: var(--program-teal);
+}
+
+.programs-page .reveal,
+.programs-page .reveal.active {
+    opacity: 1;
+    transform: none;
 }
 
 .programs-hero {
     padding: 9rem var(--space-md) 4.5rem;
     text-align: center;
-    background:
-        radial-gradient(circle at 18% 10%, rgba(155, 197, 61, 0.13), transparent 28rem),
-        radial-gradient(circle at 82% 24%, rgba(0, 137, 135, 0.08), transparent 28rem),
-        linear-gradient(180deg, #fffdf8 0%, #f8f4ec 100%);
+    background: #ffffff;
 }
 
 .programs-hero__inner {
     max-width: 880px;
+}
+
+.programs-hero .section-label::after {
+    content: '';
+    display: block;
+    width: 4.5rem;
+    height: 2px;
+    margin: 1rem auto 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--program-blue), var(--program-teal));
 }
 
 .programs-hero__title {
@@ -1516,14 +1538,18 @@ a {
     line-height: 1.08;
     letter-spacing: -0.06em;
     font-weight: 800;
-    color: var(--text-primary);
+    color: var(--program-ink);
     word-break: keep-all;
+}
+
+.programs-hero__accent {
+    color: var(--program-blue);
 }
 
 .programs-hero__lead {
     max-width: 680px;
     margin: 0 auto;
-    color: var(--text-secondary);
+    color: var(--program-body);
     font-size: clamp(1.08rem, 2vw, 1.35rem);
     line-height: 1.75;
     word-break: keep-all;
@@ -1544,11 +1570,31 @@ a {
 }
 
 .program-feature-card {
+    --card-accent: var(--program-blue);
+    --card-soft: var(--program-blue-soft);
     padding: 2.25rem;
     border-radius: 1.45rem;
     border-color: var(--program-line);
-    background: rgba(255, 255, 255, 0.74);
+    border-top: 4px solid var(--card-accent);
+    background: #ffffff;
     box-shadow: var(--program-shadow);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.program-feature-card:nth-child(2) {
+    --card-accent: var(--program-teal);
+    --card-soft: var(--program-teal-soft);
+}
+
+.program-feature-card:nth-child(3) {
+    --card-accent: var(--program-orange);
+    --card-soft: var(--program-orange-soft);
+}
+
+.program-feature-card:hover {
+    border-color: rgba(28, 191, 143, 0.35);
+    box-shadow: 0 22px 54px rgba(28, 191, 143, 0.11);
+    transform: translateY(-2px);
 }
 
 .program-feature-card__icon {
@@ -1559,8 +1605,8 @@ a {
     height: 3rem;
     margin-bottom: 1.35rem;
     border-radius: 1rem;
-    color: var(--program-deep);
-    background: var(--program-sage-soft);
+    color: var(--card-accent);
+    background: var(--card-soft);
 }
 
 .program-feature-card__icon svg {
@@ -1576,19 +1622,19 @@ a {
     font-size: 1.35rem;
     line-height: 1.3;
     font-weight: 800;
-    color: var(--program-deep-ink);
+    color: var(--program-ink);
     word-break: keep-all;
 }
 
 .program-feature-card p {
-    color: var(--text-secondary);
+    color: var(--program-body);
     font-size: 1rem;
     line-height: 1.7;
     word-break: keep-all;
 }
 
 .growth-roadmap {
-    background: var(--program-ivory);
+    background: #faf9f8;
 }
 
 .growth-timeline {
@@ -1606,17 +1652,30 @@ a {
     left: 16.5%;
     right: 16.5%;
     height: 1px;
-    background: var(--program-line);
+    background: linear-gradient(90deg, rgba(38, 128, 255, 0.2), rgba(38, 128, 255, 0.72), rgba(38, 128, 255, 0.2));
 }
 
 .growth-step {
+    --step-accent: var(--program-yellow);
+    --step-soft: var(--program-yellow-soft);
     position: relative;
     z-index: 1;
     padding: 2rem;
     border-radius: 1.45rem;
-    background: rgba(255, 255, 255, 0.78);
+    background: #ffffff;
     border: 1px solid var(--program-line);
+    border-top: 4px solid var(--step-accent);
     box-shadow: var(--program-shadow);
+}
+
+.growth-step:nth-child(2) {
+    --step-accent: var(--program-teal);
+    --step-soft: var(--program-teal-soft);
+}
+
+.growth-step:nth-child(3) {
+    --step-accent: var(--program-green);
+    --step-soft: var(--program-green-soft);
 }
 
 .growth-step:not(:last-child)::after {
@@ -1626,8 +1685,8 @@ a {
     right: -0.95rem;
     width: 0.58rem;
     height: 0.58rem;
-    border-top: 1px solid var(--program-deep);
-    border-right: 1px solid var(--program-deep);
+    border-top: 1px solid var(--program-blue);
+    border-right: 1px solid var(--program-blue);
     transform: rotate(45deg);
     background: transparent;
 }
@@ -1640,15 +1699,15 @@ a {
     height: 4.2rem;
     margin-bottom: 1.4rem;
     border-radius: 999px;
-    background: var(--program-deep);
-    color: #fff;
+    background: var(--step-accent);
+    color: var(--program-black);
     font-size: 0.9rem;
     font-weight: 800;
     letter-spacing: 0.08em;
 }
 
 .growth-step__grade {
-    color: var(--program-deep);
+    color: var(--program-blue);
     font-weight: 800;
     margin-bottom: 0.25rem;
 }
@@ -1658,28 +1717,28 @@ a {
     font-size: 1.55rem;
     line-height: 1.25;
     font-weight: 800;
-    color: var(--text-primary);
+    color: var(--program-ink);
 }
 
 .growth-step__keywords {
     display: inline-flex;
     padding: 0.45rem 0.8rem;
     border-radius: 999px;
-    background: var(--program-sage-soft);
-    color: var(--program-deep-ink);
+    background: var(--step-soft);
+    color: var(--program-ink);
     font-size: 0.9rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
 .growth-step__text {
-    color: var(--text-secondary);
+    color: var(--program-body);
     line-height: 1.75;
     word-break: keep-all;
 }
 
 .subject-direction {
-    background: #fffdf8;
+    background: #ffffff;
 }
 
 .subject-grid {
@@ -1690,16 +1749,53 @@ a {
 }
 
 .subject-card {
+    --subject-accent: var(--program-blue);
+    --subject-label: var(--subject-accent);
+    position: relative;
     padding: 2rem;
     border-radius: 1.4rem;
-    border: 1px solid rgba(47, 93, 70, 0.1);
-    background: linear-gradient(180deg, #ffffff 0%, rgba(251, 247, 239, 0.86) 100%);
-    box-shadow: 0 14px 38px rgba(47, 93, 70, 0.055);
+    border: 1px solid var(--program-line);
+    background: #ffffff;
+    box-shadow: var(--program-shadow);
+}
+
+.subject-card::before {
+    content: '';
+    display: block;
+    width: 3.25rem;
+    height: 3px;
+    margin-bottom: 1.25rem;
+    border-radius: 999px;
+    background: var(--subject-accent);
+}
+
+.subject-card::after {
+    content: '';
+    position: absolute;
+    top: 1.85rem;
+    right: 1.85rem;
+    width: 0.72rem;
+    height: 0.72rem;
+    border-radius: 999px;
+    border: 2px solid var(--subject-accent);
+}
+
+.subject-card:nth-child(2) {
+    --subject-accent: var(--program-teal);
+}
+
+.subject-card:nth-child(3) {
+    --subject-accent: var(--program-orange);
+}
+
+.subject-card:nth-child(4) {
+    --subject-accent: var(--program-yellow);
+    --subject-label: #8a6d00;
 }
 
 .subject-card__name {
     margin-bottom: 1.1rem;
-    color: var(--program-deep);
+    color: var(--subject-label);
     font-size: 0.95rem;
     font-weight: 900;
     letter-spacing: 0.12em;
@@ -1707,19 +1803,19 @@ a {
 
 .subject-card h3 {
     margin-bottom: 0.85rem;
-    color: var(--program-deep-ink);
+    color: var(--program-ink);
     font-size: 1.35rem;
     font-weight: 800;
 }
 
 .subject-card p:not(.subject-card__name) {
-    color: var(--text-secondary);
+    color: var(--program-body);
     line-height: 1.7;
     word-break: keep-all;
 }
 
 .curriculum-roadmap {
-    background: linear-gradient(180deg, var(--program-ivory), #fffdf8);
+    background: linear-gradient(180deg, #faf9f8, #ffffff);
 }
 
 .status-grid {
@@ -1730,22 +1826,36 @@ a {
 }
 
 .status-card {
+    --status-accent: var(--program-blue);
     padding: 1.35rem 1.45rem;
     border-color: var(--program-line);
+    border-top: 3px solid var(--status-accent);
     border-radius: 1.25rem;
-    background: rgba(255, 255, 255, 0.76);
+    background: #ffffff;
+}
+
+.status-card:nth-child(2) {
+    --status-accent: var(--program-teal);
+}
+
+.status-card:nth-child(3) {
+    --status-accent: var(--program-orange);
+}
+
+.status-card:nth-child(4) {
+    --status-accent: var(--program-yellow);
 }
 
 .status-card p {
     margin-bottom: 0.3rem;
-    color: var(--program-deep);
+    color: var(--status-accent);
     font-size: 0.86rem;
     font-weight: 900;
     letter-spacing: 0.08em;
 }
 
 .status-card strong {
-    color: var(--text-primary);
+    color: var(--program-ink);
     font-size: 1rem;
     line-height: 1.45;
     word-break: keep-all;
@@ -1755,7 +1865,7 @@ a {
     margin-top: 1.5rem;
     padding: 1.25rem;
     border-radius: 1.45rem;
-    background: rgba(255, 255, 255, 0.84);
+    background: #ffffff;
     border: 1px solid var(--program-line);
     box-shadow: var(--program-shadow);
 }
@@ -1775,16 +1885,16 @@ a {
 .programs-page .roadmap-table th,
 .programs-page .roadmap-table td {
     padding: 1.05rem 1rem;
-    border-bottom: 1px solid rgba(47, 93, 70, 0.1);
+    border-bottom: 1px solid rgba(64, 64, 64, 0.09);
 }
 
 .programs-page .roadmap-table th {
-    background: rgba(223, 232, 214, 0.42);
-    color: var(--program-deep-ink);
+    background: rgba(38, 128, 255, 0.055);
+    color: var(--program-ink);
     text-transform: none;
     letter-spacing: 0;
     font-size: 0.9rem;
-    border-bottom: 1px solid rgba(47, 93, 70, 0.16);
+    border-bottom: 1px solid rgba(38, 128, 255, 0.16);
 }
 
 .programs-page .roadmap-table th:first-child {
@@ -1796,7 +1906,7 @@ a {
 }
 
 .programs-page .roadmap-table tbody tr:hover {
-    background: rgba(223, 232, 214, 0.18);
+    background: rgba(38, 128, 255, 0.035);
 }
 
 .programs-page .col-date {
@@ -1812,11 +1922,15 @@ a {
 }
 
 .programs-page .td-date {
-    color: var(--program-deep-ink);
+    color: var(--program-ink);
+}
+
+.programs-page .td-date strong {
+    color: var(--program-orange);
 }
 
 .programs-page .empty-dash {
-    color: rgba(47, 93, 70, 0.24);
+    color: rgba(64, 64, 64, 0.24);
 }
 
 .programs-page .badge {
@@ -1826,26 +1940,26 @@ a {
 }
 
 .programs-page .badge--done {
-    background: var(--program-deep);
-    color: #fff;
+    background: var(--program-green);
+    color: var(--program-black);
     box-shadow: none;
 }
 
 .programs-page .badge--progress {
-    background: rgba(155, 197, 61, 0.18);
-    color: var(--program-deep-ink);
-    border: 1px solid rgba(155, 197, 61, 0.38);
+    background: var(--program-blue-soft);
+    color: var(--program-blue);
+    border: 1px solid rgba(38, 128, 255, 0.26);
 }
 
 .badge--planned {
-    background: rgba(198, 178, 135, 0.18);
-    color: rgba(47, 60, 50, 0.78);
-    border: 1px solid rgba(198, 178, 135, 0.28);
+    background: rgba(64, 64, 64, 0.07);
+    color: rgba(64, 64, 64, 0.76);
+    border: 1px solid rgba(64, 64, 64, 0.12);
 }
 
 .programs-cta {
     padding: 5.5rem var(--space-md) 7rem;
-    background: #fffdf8;
+    background: #ffffff;
 }
 
 .programs-cta__inner {
@@ -1857,7 +1971,7 @@ a {
     border-radius: 1.5rem;
     border: 1px solid var(--program-line);
     background:
-        radial-gradient(circle at 90% 10%, rgba(155, 197, 61, 0.16), transparent 18rem),
+        radial-gradient(circle at 90% 10%, rgba(38, 128, 255, 0.11), transparent 18rem),
         #fff;
     box-shadow: var(--program-shadow);
 }
@@ -1881,8 +1995,27 @@ a {
 }
 
 .programs-cta__actions .btn--glass-cyan {
-    background: var(--program-deep);
-    border-color: var(--program-deep);
+    background: var(--program-blue) !important;
+    border-color: var(--program-blue) !important;
+    color: #fff !important;
+    box-shadow: 0 14px 30px rgba(38, 128, 255, 0.18) !important;
+}
+
+.programs-cta__actions .btn--glass-cyan:hover {
+    background: #1266db !important;
+    border-color: #1266db !important;
+}
+
+.programs-cta__actions .btn--outline-minimal {
+    color: var(--program-blue) !important;
+    border-color: rgba(38, 128, 255, 0.42) !important;
+    background: #ffffff !important;
+}
+
+.programs-cta__actions .btn--outline-minimal:hover {
+    color: var(--program-teal) !important;
+    border-color: rgba(28, 191, 143, 0.5) !important;
+    background: rgba(28, 191, 143, 0.055) !important;
 }
 
 @media (max-width: 1100px) {
