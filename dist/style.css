@@ -383,7 +383,7 @@ a {
 }
 
 .hero__content {
-    text-align: left;
+    text-align: center;
 }
 
 /* Testimonials Section */
@@ -644,12 +644,12 @@ a {
 
 .hero__description {
     max-width: 40rem;
-    margin: 0 0 var(--space-xl) 0;
+    margin: 0 auto var(--space-xl) auto;
     padding: 1.35rem 2rem;
     font-size: clamp(1.1rem, 1.8vw, 1.25rem);
     color: var(--text-secondary);
     line-height: var(--line-height-relaxed);
-    text-align: left;
+    text-align: center;
     background: rgba(255, 255, 255, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -1166,7 +1166,7 @@ a {
         max-width: 100%;
         margin-left: auto;
         margin-right: auto;
-        text-align: left;
+        text-align: center;
     }
 
     .hero__image-wrapper {
