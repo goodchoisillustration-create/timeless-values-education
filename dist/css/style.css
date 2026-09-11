@@ -1487,7 +1487,6 @@ a {
     --program-teal: #1CBF8F;
     --program-orange: #FF6B00;
     --program-yellow: #FFCC00;
-    --program-green: #8FF50F;
     --program-red: #FF1C26;
     --program-ink: #404040;
     --program-black: #000000;
@@ -1497,7 +1496,6 @@ a {
     --program-teal-soft: rgba(28, 191, 143, 0.1);
     --program-yellow-soft: rgba(255, 204, 0, 0.16);
     --program-orange-soft: rgba(255, 107, 0, 0.1);
-    --program-green-soft: rgba(143, 245, 15, 0.16);
     --program-shadow: 0 18px 46px rgba(0, 0, 0, 0.045);
     background: linear-gradient(180deg, #ffffff 0%, #faf9f8 52%, #ffffff 100%);
 }
@@ -1674,8 +1672,8 @@ a {
 }
 
 .growth-step:nth-child(3) {
-    --step-accent: var(--program-green);
-    --step-soft: var(--program-green-soft);
+    --step-accent: var(--program-blue);
+    --step-soft: var(--program-blue-soft);
 }
 
 .growth-step:not(:last-child)::after {
@@ -1940,8 +1938,8 @@ a {
 }
 
 .programs-page .badge--done {
-    background: var(--program-green);
-    color: var(--program-black);
+    background: var(--program-teal);
+    color: #ffffff;
     box-shadow: none;
 }
 
