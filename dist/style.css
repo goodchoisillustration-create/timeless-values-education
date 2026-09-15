@@ -2744,6 +2744,11 @@ a {
     padding: 0;
 }
 
+.maker-card__portrait--orangeart .maker-card__portrait-img {
+    transform: scale(0.94);
+    transform-origin: center center;
+}
+
 .maker-card__identity {
     min-width: 0;
 }
