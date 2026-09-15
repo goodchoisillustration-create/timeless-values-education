@@ -1483,21 +1483,24 @@ a {
    Programs Page - Curriculum Information Design
    ========================================================================== */
 .programs-page {
-    --program-blue: #2680FF;
-    --program-teal: #1CBF8F;
-    --program-orange: #FF6B00;
-    --program-yellow: #FFCC00;
-    --program-red: #FF1C26;
-    --program-ink: #404040;
-    --program-black: #000000;
-    --program-body: #5f5f5f;
-    --program-line: rgba(64, 64, 64, 0.12);
-    --program-blue-soft: rgba(38, 128, 255, 0.08);
-    --program-teal-soft: rgba(28, 191, 143, 0.1);
-    --program-yellow-soft: rgba(255, 204, 0, 0.16);
-    --program-orange-soft: rgba(255, 107, 0, 0.1);
-    --program-shadow: 0 18px 46px rgba(0, 0, 0, 0.045);
-    background: linear-gradient(180deg, #ffffff 0%, #faf9f8 52%, #ffffff 100%);
+    --program-blue: var(--dot-blue);
+    --program-teal: var(--dot-cyan);
+    --program-orange: var(--dot-orange);
+    --program-yellow: var(--dot-yellow);
+    --program-red: var(--dot-red);
+    --program-green: var(--dot-green);
+    --program-ink: var(--text-primary);
+    --program-black: #231f20;
+    --program-body: var(--text-secondary);
+    --program-muted: var(--text-light);
+    --program-line: rgba(23, 20, 18, 0.09);
+    --program-blue-soft: rgba(34, 117, 184, 0.08);
+    --program-teal-soft: rgba(0, 137, 135, 0.08);
+    --program-yellow-soft: rgba(255, 200, 0, 0.14);
+    --program-orange-soft: rgba(240, 106, 0, 0.08);
+    --program-green-soft: rgba(155, 197, 61, 0.12);
+    --program-shadow: 0 12px 32px rgba(15, 23, 42, 0.035);
+    background: linear-gradient(180deg, #ffffff 0%, var(--bg-color) 50%, #ffffff 100%);
 }
 
 .programs-page .section-label {
@@ -1511,31 +1514,31 @@ a {
 }
 
 .programs-hero {
-    padding: 9rem var(--space-md) 4.5rem;
+    padding: 14.5rem var(--space-md) 6rem;
     text-align: center;
-    background: #ffffff;
+    background: rgba(34, 117, 184, 0.03);
 }
 
 .programs-hero__inner {
-    max-width: 880px;
+    max-width: 900px;
 }
 
 .programs-hero .section-label::after {
     content: '';
     display: block;
-    width: 4.5rem;
+    width: 4rem;
     height: 2px;
     margin: 1rem auto 0;
     border-radius: 999px;
-    background: linear-gradient(90deg, var(--program-blue), var(--program-teal));
+    background: var(--program-blue);
 }
 
 .programs-hero__title {
-    margin: 1.15rem 0 1.5rem;
-    font-size: clamp(2.45rem, 5.4vw, 5.1rem);
-    line-height: 1.08;
-    letter-spacing: -0.06em;
-    font-weight: 800;
+    margin: 1.05rem 0 1.35rem;
+    font-size: clamp(2.35rem, 4.2vw, 3.6rem);
+    line-height: 1.14;
+    letter-spacing: -0.045em;
+    font-weight: 700;
     color: var(--program-ink);
     word-break: keep-all;
 }
@@ -1545,37 +1548,41 @@ a {
 }
 
 .programs-hero__lead {
-    max-width: 680px;
+    max-width: 620px;
     margin: 0 auto;
     color: var(--program-body);
-    font-size: clamp(1.08rem, 2vw, 1.35rem);
+    font-size: clamp(1rem, 1.55vw, 1.16rem);
     line-height: 1.75;
     word-break: keep-all;
 }
 
 .programs-section {
-    padding: 5.75rem var(--space-md);
+    padding: 6.5rem var(--space-md);
 }
 
 .programs-features {
-    padding-top: 3rem;
+    padding-top: 6rem;
+}
+
+.programs-features .section-header {
+    margin-bottom: 3rem;
 }
 
 .program-feature-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.35rem;
+    gap: 1.5rem;
 }
 
 .program-feature-card {
     --card-accent: var(--program-blue);
     --card-soft: var(--program-blue-soft);
-    padding: 2.25rem;
-    border-radius: 1.45rem;
+    padding: 2.1rem;
+    border-radius: 1rem;
     border-color: var(--program-line);
-    border-top: 4px solid var(--card-accent);
+    border-top: 3px solid var(--card-accent);
     background: #ffffff;
-    box-shadow: var(--program-shadow);
+    box-shadow: none;
     transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
@@ -1590,8 +1597,8 @@ a {
 }
 
 .program-feature-card:hover {
-    border-color: rgba(28, 191, 143, 0.35);
-    box-shadow: 0 22px 54px rgba(28, 191, 143, 0.11);
+    border-color: rgba(34, 117, 184, 0.2);
+    box-shadow: var(--program-shadow);
     transform: translateY(-2px);
 }
 
@@ -1599,10 +1606,10 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    margin-bottom: 1.35rem;
-    border-radius: 1rem;
+    width: 2.7rem;
+    height: 2.7rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.9rem;
     color: var(--card-accent);
     background: var(--card-soft);
 }
@@ -1617,16 +1624,16 @@ a {
 
 .program-feature-card h2 {
     margin-bottom: 0.85rem;
-    font-size: 1.35rem;
+    font-size: 1.22rem;
     line-height: 1.3;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--program-ink);
     word-break: keep-all;
 }
 
 .program-feature-card p {
     color: var(--program-body);
-    font-size: 1rem;
+    font-size: 0.98rem;
     line-height: 1.7;
     word-break: keep-all;
 }
@@ -1638,9 +1645,9 @@ a {
 .growth-timeline {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: 1.35rem;
     position: relative;
-    margin-top: 3.2rem;
+    margin-top: 3rem;
 }
 
 .growth-timeline::before {
@@ -1650,7 +1657,7 @@ a {
     left: 16.5%;
     right: 16.5%;
     height: 1px;
-    background: linear-gradient(90deg, rgba(38, 128, 255, 0.2), rgba(38, 128, 255, 0.72), rgba(38, 128, 255, 0.2));
+    background: linear-gradient(90deg, rgba(34, 117, 184, 0.16), rgba(34, 117, 184, 0.5), rgba(34, 117, 184, 0.16));
 }
 
 .growth-step {
@@ -1659,11 +1666,11 @@ a {
     position: relative;
     z-index: 1;
     padding: 2rem;
-    border-radius: 1.45rem;
+    border-radius: 1rem;
     background: #ffffff;
     border: 1px solid var(--program-line);
-    border-top: 4px solid var(--step-accent);
-    box-shadow: var(--program-shadow);
+    border-top: 3px solid var(--step-accent);
+    box-shadow: none;
 }
 
 .growth-step:nth-child(2) {
@@ -1672,8 +1679,8 @@ a {
 }
 
 .growth-step:nth-child(3) {
-    --step-accent: var(--program-blue);
-    --step-soft: var(--program-blue-soft);
+    --step-accent: var(--program-green);
+    --step-soft: var(--program-green-soft);
 }
 
 .growth-step:not(:last-child)::after {
@@ -1693,9 +1700,9 @@ a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 4.2rem;
-    height: 4.2rem;
-    margin-bottom: 1.4rem;
+    width: 3.45rem;
+    height: 3.45rem;
+    margin-bottom: 1.25rem;
     border-radius: 999px;
     background: var(--step-accent);
     color: var(--program-black);
@@ -1705,16 +1712,16 @@ a {
 }
 
 .growth-step__grade {
-    color: var(--program-blue);
-    font-weight: 800;
+    color: var(--step-accent);
+    font-weight: 700;
     margin-bottom: 0.25rem;
 }
 
 .growth-step h3 {
     margin-bottom: 0.7rem;
-    font-size: 1.55rem;
+    font-size: 1.38rem;
     line-height: 1.25;
-    font-weight: 800;
+    font-weight: 700;
     color: var(--program-ink);
 }
 
@@ -1724,7 +1731,7 @@ a {
     border-radius: 999px;
     background: var(--step-soft);
     color: var(--program-ink);
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
@@ -1742,7 +1749,7 @@ a {
 .subject-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1.2rem;
+    gap: 1.25rem;
     margin-top: 3rem;
 }
 
@@ -1751,10 +1758,10 @@ a {
     --subject-label: var(--subject-accent);
     position: relative;
     padding: 2rem;
-    border-radius: 1.4rem;
+    border-radius: 1rem;
     border: 1px solid var(--program-line);
     background: #ffffff;
-    box-shadow: var(--program-shadow);
+    box-shadow: none;
 }
 
 .subject-card::before {
@@ -1795,7 +1802,7 @@ a {
     margin-bottom: 1.1rem;
     color: var(--subject-label);
     font-size: 0.95rem;
-    font-weight: 900;
+    font-weight: 800;
     letter-spacing: 0.12em;
 }
 
@@ -1803,7 +1810,7 @@ a {
     margin-bottom: 0.85rem;
     color: var(--program-ink);
     font-size: 1.35rem;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .subject-card p:not(.subject-card__name) {
@@ -1828,7 +1835,7 @@ a {
     padding: 1.35rem 1.45rem;
     border-color: var(--program-line);
     border-top: 3px solid var(--status-accent);
-    border-radius: 1.25rem;
+    border-radius: 1rem;
     background: #ffffff;
 }
 
@@ -1848,7 +1855,7 @@ a {
     margin-bottom: 0.3rem;
     color: var(--status-accent);
     font-size: 0.86rem;
-    font-weight: 900;
+    font-weight: 800;
     letter-spacing: 0.08em;
 }
 
@@ -1862,10 +1869,10 @@ a {
 .programs-page .build__table-wrapper {
     margin-top: 1.5rem;
     padding: 1.25rem;
-    border-radius: 1.45rem;
+    border-radius: 1rem;
     background: #ffffff;
     border: 1px solid var(--program-line);
-    box-shadow: var(--program-shadow);
+    box-shadow: none;
 }
 
 .programs-page .table-responsive {
@@ -1877,7 +1884,7 @@ a {
     min-width: 820px;
     border-collapse: separate;
     border-spacing: 0;
-    font-size: 0.95rem;
+    font-size: 0.94rem;
 }
 
 .programs-page .roadmap-table th,
@@ -1887,12 +1894,12 @@ a {
 }
 
 .programs-page .roadmap-table th {
-    background: rgba(38, 128, 255, 0.055);
+    background: rgba(34, 117, 184, 0.055);
     color: var(--program-ink);
     text-transform: none;
     letter-spacing: 0;
     font-size: 0.9rem;
-    border-bottom: 1px solid rgba(38, 128, 255, 0.16);
+    border-bottom: 1px solid rgba(34, 117, 184, 0.14);
 }
 
 .programs-page .roadmap-table th:first-child {
@@ -1904,7 +1911,7 @@ a {
 }
 
 .programs-page .roadmap-table tbody tr:hover {
-    background: rgba(38, 128, 255, 0.035);
+    background: rgba(34, 117, 184, 0.032);
 }
 
 .programs-page .col-date {
@@ -1938,7 +1945,7 @@ a {
 }
 
 .programs-page .badge--done {
-    background: var(--program-teal);
+    background: var(--program-green);
     color: #ffffff;
     box-shadow: none;
 }
@@ -1946,7 +1953,7 @@ a {
 .programs-page .badge--progress {
     background: var(--program-blue-soft);
     color: var(--program-blue);
-    border: 1px solid rgba(38, 128, 255, 0.26);
+    border: 1px solid rgba(34, 117, 184, 0.24);
 }
 
 .badge--planned {
@@ -1966,12 +1973,12 @@ a {
     justify-content: space-between;
     gap: 2rem;
     padding: 3rem;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     border: 1px solid var(--program-line);
     background:
-        radial-gradient(circle at 90% 10%, rgba(38, 128, 255, 0.11), transparent 18rem),
+        radial-gradient(circle at 90% 10%, rgba(34, 117, 184, 0.08), transparent 18rem),
         #fff;
-    box-shadow: var(--program-shadow);
+    box-shadow: none;
 }
 
 .programs-cta__inner .section-header,
@@ -1996,17 +2003,17 @@ a {
     background: var(--program-blue) !important;
     border-color: var(--program-blue) !important;
     color: #fff !important;
-    box-shadow: 0 14px 30px rgba(38, 128, 255, 0.18) !important;
+    box-shadow: 0 14px 30px rgba(34, 117, 184, 0.16) !important;
 }
 
 .programs-cta__actions .btn--glass-cyan:hover {
-    background: #1266db !important;
-    border-color: #1266db !important;
+    background: var(--program-teal) !important;
+    border-color: var(--program-teal) !important;
 }
 
 .programs-cta__actions .btn--outline-minimal {
     color: var(--program-blue) !important;
-    border-color: rgba(38, 128, 255, 0.42) !important;
+    border-color: rgba(34, 117, 184, 0.38) !important;
     background: #ffffff !important;
 }
 
@@ -2017,7 +2024,17 @@ a {
 }
 
 @media (max-width: 1100px) {
-    .program-feature-grid,
+    .program-feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .subject-grid,
+    .status-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
     .growth-timeline {
         grid-template-columns: 1fr;
     }
@@ -2025,11 +2042,6 @@ a {
     .growth-timeline::before,
     .growth-step:not(:last-child)::after {
         display: none;
-    }
-
-    .subject-grid,
-    .status-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .growth-step {
@@ -2047,11 +2059,11 @@ a {
 
 @media (max-width: 768px) {
     .programs-hero {
-        padding: 8rem 1rem 3.25rem;
+        padding: 8rem 1rem 4rem;
     }
 
     .programs-hero__title {
-        font-size: clamp(2.25rem, 12vw, 3.35rem);
+        font-size: clamp(2.05rem, 9.8vw, 2.8rem);
     }
 
     .programs-hero__lead br,
