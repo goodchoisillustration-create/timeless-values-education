@@ -3394,15 +3394,16 @@ a {
 }
 
 .philosophy-hero .page-hero__title {
-    font-size: clamp(2.1rem, 3.3vw, 3rem);
-    line-height: 1.08;
-    margin-bottom: 0.95rem;
+    font-size: clamp(2.65rem, 4.8vw, 4.1rem);
+    line-height: 1.14;
+    margin-bottom: 1.15rem;
+    letter-spacing: -0.04em;
 }
 
 .philosophy-hero .page-hero__lead {
-    font-size: 0.98rem;
-    line-height: 1.8;
-    max-width: 38rem;
+    font-size: clamp(1.08rem, 1.7vw, 1.24rem);
+    line-height: 1.75;
+    max-width: 42rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -3428,6 +3429,12 @@ a {
 .philosophy-page .section-subtitle {
     font-size: var(--section-description-size);
     line-height: 1.7;
+}
+
+.philosophy-page .section-header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .philosophy-hero {
@@ -3460,7 +3467,7 @@ a {
     border-radius: 999px;
     background: rgba(34, 117, 184, 0.08);
     color: var(--brand-blue);
-    font-size: 0.92rem;
+    font-size: 1rem;
     font-weight: 700;
     letter-spacing: -0.01em;
 }
@@ -3501,7 +3508,7 @@ a {
 }
 
 .philosophy-topics {
-    margin-top: 3.5rem;
+    margin-top: var(--section-content-gap);
 }
 
 .philosophy-essay__grid {
@@ -3512,20 +3519,22 @@ a {
 }
 
 .philosophy-essay__body {
-    padding: 2rem;
-    border-radius: 1.5rem;
+    padding: 2.35rem;
+    border-radius: 1.15rem;
 }
 
 .philosophy-essay__body h3 {
-    font-size: 1.45rem;
-    margin-bottom: 0.8rem;
+    font-size: 1.55rem;
+    line-height: 1.35;
+    margin-bottom: 0.9rem;
     margin-top: 0;
+    font-weight: 700;
 }
 
 .philosophy-essay__body p {
     color: var(--text-secondary);
-    font-size: 1.08rem;
-    line-height: 1.9;
+    font-size: 1.1rem;
+    line-height: 1.85;
     margin-bottom: 1.1rem;
 }
 
@@ -3548,8 +3557,8 @@ a {
 }
 
 .philosophy-essay__aside-card {
-    padding: 1.4rem;
-    border-radius: 1.25rem;
+    padding: 1.6rem;
+    border-radius: 1.15rem;
 }
 
 .philosophy-flow__steps {
@@ -3559,8 +3568,8 @@ a {
 }
 
 .philosophy-flow__step {
-    padding: 1.4rem;
-    border-radius: 1.25rem;
+    padding: 1.6rem;
+    border-radius: 1.15rem;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
@@ -3569,21 +3578,23 @@ a {
 .philosophy-flow__num {
     display: inline-flex;
     margin-bottom: 1rem;
-    font-size: 0.8rem;
-    font-weight: 800;
-    letter-spacing: 0.12em;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.025em;
     color: var(--brand-blue);
 }
 
 .philosophy-flow__step h3 {
-    font-size: 1.15rem;
+    font-size: 1.28rem;
+    line-height: 1.35;
     margin-bottom: 0.65rem;
+    font-weight: 700;
 }
 
 .philosophy-flow__step p {
     color: var(--text-secondary);
-    font-size: 0.98rem;
-    line-height: 1.75;
+    font-size: 1.04rem;
+    line-height: 1.7;
 }
 
 .philosophy-values__chips {
@@ -3603,7 +3614,7 @@ a {
     align-items: center;
     gap: 0.7rem;
     padding: 1.2rem 0.9rem 1.1rem;
-    border-radius: 1.1rem;
+    border-radius: 1.15rem;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
@@ -3634,10 +3645,10 @@ a {
 }
 
 .philosophy-values__text {
-    font-size: 0.95rem;
+    font-size: 1.04rem;
     line-height: 1.5;
     color: var(--text-primary);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .philosophy-values__closing {
@@ -3686,27 +3697,31 @@ a {
 
 .topic-card {
     display: block;
-    padding: 1.8rem;
+    padding: 1.85rem;
     min-height: 170px;
+    border-radius: 1.15rem;
 }
 
 .topic-card__eyebrow {
     display: inline-flex;
-    margin-bottom: 1rem;
-    font-size: 0.8rem;
+    margin-bottom: 0.85rem;
+    font-size: 0.95rem;
     color: var(--brand-blue);
     font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    line-height: 1.4;
 }
 
 .topic-card__title {
-    font-size: 1.3rem;
+    font-size: 1.35rem;
+    line-height: 1.35;
     margin-bottom: 0.75rem;
+    font-weight: 700;
 }
 
 .topic-card__text {
     color: var(--text-secondary);
+    font-size: 1.04rem;
     line-height: 1.7;
 }
 
@@ -3945,7 +3960,7 @@ a {
     }
 
     .page-hero__title {
-        font-size: clamp(2.4rem, 10vw, 3.2rem);
+        font-size: clamp(2.35rem, 10vw, 3.15rem);
     }
 
     .page-hero__lead {
