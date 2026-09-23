@@ -227,7 +227,7 @@ a {
 .hero__title-primary {
     display: inline-block;
     font-size: clamp(2.55rem, 5vw, 4.35rem);
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.08;
 }
 
