@@ -224,6 +224,13 @@ a {
     font-weight: 700;
 }
 
+.hero__title-primary {
+    display: inline-block;
+    font-size: clamp(2.55rem, 5vw, 4.35rem);
+    font-weight: 800;
+    line-height: 1.08;
+}
+
 /* Editorial Line Accents */
 .accent-top-blue { border-top: 4px solid var(--dot-blue) !important; }
 .accent-top-cyan { border-top: 4px solid var(--dot-cyan) !important; }
@@ -655,7 +662,7 @@ a {
 }
 
 .hero__description {
-    max-width: 40rem;
+    max-width: 52rem;
     margin: 0 auto var(--space-xl) auto;
     padding: 1.35rem 2rem;
     font-size: clamp(1.1rem, 1.8vw, 1.25rem);
@@ -1174,11 +1181,16 @@ a {
 
     .hero__title {
         margin-bottom: 1rem;
-        max-width: 12ch;
+        max-width: 18ch;
         margin-left: auto;
         margin-right: auto;
         font-size: clamp(1.9rem, 8vw, 2.35rem);
         line-height: 1.08;
+    }
+
+    .hero__title-primary {
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+        line-height: 1.12;
     }
 
     .hero__description {
@@ -4031,6 +4043,10 @@ a {
         white-space: nowrap;
         margin-top: 0;
         font-size: 0.96em;
+    }
+
+    .hero__title-primary {
+        font-size: clamp(2.3rem, 10vw, 3.4rem);
     }
 
     .curriculum__showcase {
