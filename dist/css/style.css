@@ -226,7 +226,7 @@ a {
 
 .hero__title-primary {
     display: inline-block;
-    font-size: clamp(2.55rem, 5vw, 4.35rem);
+    font-size: clamp(2.25rem, 4.35vw, 3.65rem);
     font-weight: 700;
     line-height: 1.08;
 }
@@ -1189,7 +1189,7 @@ a {
     }
 
     .hero__title-primary {
-        font-size: clamp(2.2rem, 10vw, 3.2rem);
+        font-size: clamp(2.05rem, 9vw, 2.85rem);
         line-height: 1.12;
     }
 
@@ -4046,7 +4046,7 @@ a {
     }
 
     .hero__title-primary {
-        font-size: clamp(2.3rem, 10vw, 3.4rem);
+        font-size: clamp(2.08rem, 9vw, 2.95rem);
     }
 
     .curriculum__showcase {
